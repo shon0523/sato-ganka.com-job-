@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><meta name="design_doc_mode" content="canvas"><link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"><style>body{margin:0;background:#E9EBEF}a{color:#1F2433;text-decoration:none}a:hover{color:#2A4E8F}</style></helmet>
+<div style="padding:48px;min-width:1856px;box-sizing:border-box;font-family:'Zen Kaku Gothic New',sans-serif;color:#1F2433">
+  <div style="width:1760px;display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:20px">
+    <div><a href="Index.dc.html" style="font:12px 'DM Sans',sans-serif;color:#5A6070">← INDEX</a><h1 style="font:500 22px/1.3 'Zen Kaku Gothic New',sans-serif;margin:8px 0 0">① RECRUIT TOP <span style="font:400 13px 'DM Sans',sans-serif;color:#8A90A0;margin-left:12px">/recruit/ ・ 1440px ・ content 1160px / 12col</span></h1></div>
+    <nav style="display:flex;gap:16px;font:12px 'DM Sans',sans-serif"><a href="About.dc.html">② ABOUT</a><a href="Job.dc.html">③ JOB</a><a href="Environment.dc.html">④ ENVIRONMENT</a><a href="Recruit Info.dc.html">⑤ RECRUIT INFO</a><a href="Entry.dc.html">⑥ ENTRY</a></nav>
+  </div>
+  <div style="width:1760px;background:#FBFBFC;box-shadow:0 8px 40px rgba(0,0,0,.08);display:flex;flex-direction:column">
+
+    <div style="display:flex;position:sticky;top:0;z-index:20;background:rgba(251,251,252,.92);backdrop-filter:blur(8px)" data-screen-label="Header">
+      <dc-import name="RecruitHeader" active="top" hint-size="1440px,84px"></dc-import>
+      <aside style="width:320px;flex:none;padding:20px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block">HEADER 84px</b>ロゴ / 4項目ナビ(英+和) / 右CTA2つ。スクロール後は高さ64px・背景白92%＋blur、和ラベル非表示でCTAのみ維持。</aside>
+    </div>
+
+    <div style="display:flex" data-screen-label="01 First View">
+      <section style="width:1440px;flex:none;padding:56px 0 0;box-sizing:border-box">
+        <div style="width:1344px;margin:0 auto;display:grid;grid-template-columns:520px 1fr;gap:48px;align-items:stretch">
+          <div style="display:flex;flex-direction:column;justify-content:center;padding:40px 0 40px 48px">
+            <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.16em;color:#2A4E8F;margin:0 0 28px">SATO EYE CLINIC GROUP RECRUIT</p>
+            <h2 style="font:500 48px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0 0 28px;letter-spacing:.02em">見える喜びを支え、<br>地域に寄り添う。</h2>
+            <p style="font:16px/2 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0 0 40px;max-width:420px">熊本・大牟田・荒尾の3院で、大学病院水準の眼科医療を地域へ。医師とスタッフがひとつのチームとして支え合い、専門性を高めながら安心して長く働ける場所です。</p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap">
+              <a href="Recruit Info.dc.html" style="display:inline-flex;align-items:center;gap:10px;background:#2A4E8F;color:#fff;font:500 15px/1 'Zen Kaku Gothic New',sans-serif;padding:18px 30px;border-radius:999px">募集要項を見る<span style="font-family:'DM Sans',sans-serif">→</span></a>
+              <a href="Entry.dc.html" style="display:inline-flex;align-items:center;gap:10px;border:1px solid #1F2433;color:#1F2433;font:500 15px/1 'Zen Kaku Gothic New',sans-serif;padding:17px 30px;border-radius:999px">医院見学を申し込む</a>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:16px;min-height:640px">
+            <div style="grid-row:1/3;background:repeating-linear-gradient(135deg,#E9ECF1 0 12px,#F1F3F7 12px 24px);border-radius:16px;display:flex;align-items:center;justify-content:center"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#5A6070;background:#fff;padding:6px 10px;border-radius:4px">PHOTO｜医師と視能訓練士が診察室で患者に向き合う（縦位置・人物主体）</span></div>
+            <div style="background:repeating-linear-gradient(135deg,#E9ECF1 0 12px,#F1F3F7 12px 24px);border-radius:16px;display:flex;align-items:center;justify-content:center"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#5A6070;background:#fff;padding:6px 10px;border-radius:4px">PHOTO｜手術室チーム</span></div>
+            <div style="background:repeating-linear-gradient(135deg,#E9ECF1 0 12px,#F1F3F7 12px 24px);border-radius:16px;display:flex;align-items:center;justify-content:center"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#5A6070;background:#fff;padding:6px 10px;border-radius:4px">PHOTO｜受付スタッフの笑顔</span></div>
+          </div>
+        </div>
+        <div style="width:1160px;margin:56px auto 0;padding-bottom:96px">
+          <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#8A90A0;margin:0 0 16px">職種から探す</p>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
+            <a href="Job.dc.html#doctor" style="display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border:1px solid #E2E5EB;border-radius:12px;background:#fff"><span><span style="display:block;font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#2A4E8F;margin-bottom:8px">DOCTOR</span><span style="font:500 17px/1 'Zen Kaku Gothic New',sans-serif">医師</span></span><span style="font-family:'DM Sans',sans-serif;color:#2A4E8F">→</span></a>
+            <a href="Job.dc.html#ort" style="display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border:1px solid #E2E5EB;border-radius:12px;background:#fff"><span><span style="display:block;font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#2A4E8F;margin-bottom:8px">ORTHOPTIST</span><span style="font:500 17px/1 'Zen Kaku Gothic New',sans-serif">視能訓練士</span></span><span style="font-family:'DM Sans',sans-serif;color:#2A4E8F">→</span></a>
+            <a href="Job.dc.html#nurse" style="display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border:1px solid #E2E5EB;border-radius:12px;background:#fff"><span><span style="display:block;font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#2A4E8F;margin-bottom:8px">NURSE</span><span style="font:500 17px/1 'Zen Kaku Gothic New',sans-serif">看護師</span></span><span style="font-family:'DM Sans',sans-serif;color:#2A4E8F">→</span></a>
+            <a href="Job.dc.html#clerk" style="display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border:1px solid #E2E5EB;border-radius:12px;background:#fff"><span><span style="display:block;font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#2A4E8F;margin-bottom:8px">MEDICAL CLERK</span><span style="font:500 17px/1 'Zen Kaku Gothic New',sans-serif">医療事務</span></span><span style="font-family:'DM Sans',sans-serif;color:#2A4E8F">→</span></a>
+          </div>
+        </div>
+      </section>
+      <aside style="width:320px;flex:none;padding:40px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block;margin-bottom:8px">01 FIRST VIEW</b>左テキスト520px / 右写真コラージュ(縦1＋横2)。1画面内にコピー・CTA2・職種導線が収まる高さ(約900px)。<br><br>写真は「人」が主役。医師とスタッフ双方が写るカットを縦位置に。<br><br>職種チップは下層JOBのアンカーへ直リンク。</aside>
+    </div>
+
+    <div style="display:flex" data-screen-label="02 Message">
+      <section style="width:1440px;flex:none;padding:120px 0;background:#F2F4F8;box-sizing:border-box">
+        <div style="width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+          <div style="background:repeating-linear-gradient(135deg,#DDE2EA 0 12px,#E6EAF0 12px 24px);border-radius:16px;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;position:relative">
+            <span style="width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.12);font:600 18px 'DM Sans',sans-serif;color:#2A4E8F">▶</span>
+            <span style="position:absolute;left:20px;bottom:20px;font:12px/1.4 ui-monospace,Menlo,monospace;color:#5A6070;background:#fff;padding:6px 10px;border-radius:4px">VIDEO｜採用動画（YouTube埋め込み）サムネイル：総院長＋スタッフ</span>
+          </div>
+          <div>
+            <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">MESSAGE</p>
+            <h2 style="font:500 36px/1.5 'Zen Kaku Gothic New',sans-serif;margin:0 0 24px;letter-spacing:.02em">病気を治すだけでなく、<br>不安に寄り添う医療を。</h2>
+            <p style="font:15px/2 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0 0 16px">「地域の皆様に最良の医療を提供する」。この理念のもと、約70名のスタッフが日々の診療に向き合っています。医師も、受付も、看護師も、視能訓練士も。全員が心がけているのは、患者様に寄り添うことです。</p>
+            <p style="font:15px/2 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0 0 32px">一人ひとりが目標を持ち、仲間を尊重し、協力し合う。良い医療は、スタッフ自身が心身ともに充実して働ける環境から生まれると、私たちは考えています。</p>
+            <div style="display:flex;align-items:center;gap:16px;margin-bottom:32px">
+              <span style="width:56px;height:56px;border-radius:50%;background:repeating-linear-gradient(135deg,#DDE2EA 0 6px,#E6EAF0 6px 12px)"></span>
+              <span style="font:13px/1.6 'Zen Kaku Gothic New',sans-serif;color:#5A6070">佐藤眼科グループ 総院長<br><b style="font-size:15px;color:#1F2433">佐藤 智樹</b></span>
+            </div>
+            <a href="About.dc.html#message" style="font:500 14px 'Zen Kaku Gothic New',sans-serif;color:#2A4E8F">採用メッセージ全文を読む →</a>
+          </div>
+        </div>
+      </section>
+      <aside style="width:320px;flex:none;padding:40px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block;margin-bottom:8px">02 MESSAGE</b>淡いグレー地で区切り、上下120px。動画枠は16:10、右に理念ベースの再編集文。<br><br>本文は現行「就職をご検討の皆様へ」を要約。全文はABOUTへ。</aside>
+    </div>
+
+    <div style="display:flex" data-screen-label="03 Why Sato">
+      <section style="width:1440px;flex:none;padding:120px 0;box-sizing:border-box">
+        <div style="width:1160px;margin:0 auto">
+          <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:56px">
+            <div><p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">WHY SATO</p><h2 style="font:500 36px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0;letter-spacing:.02em">佐藤眼科で働く、5つの理由</h2></div>
+            <p style="font:15px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0;max-width:460px">高度な医療と、あたたかいチーム。その両方があるから、専門性も、暮らしも、あきらめずに続けられます。</p>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:24px">
+            <a href="About.dc.html#surgery" style="grid-column:span 2;background:#fff;border:1px solid #E2E5EB;border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:14px;min-height:280px;box-sizing:border-box"><span style="font:600 32px/1 'DM Sans',sans-serif;color:#C9D3EA">01</span><span style="font:500 20px/1.5 'Zen Kaku Gothic New',sans-serif">大学病院水準の眼科医療</span><span style="font:14px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;flex:1">白内障・緑内障・網膜硝子体・角膜屈折矯正・眼瞼まで、年間4,000例超の症例と幅広い術式に触れられます。</span><span style="font:500 13px 'Zen Kaku Gothic New',sans-serif;color:#2A4E8F">手術・症例を見る →</span></a>
+            <a href="About.dc.html#team" style="grid-column:span 2;background:#fff;border:1px solid #E2E5EB;border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:14px;min-height:280px;box-sizing:border-box"><span style="font:600 32px/1 'DM Sans',sans-serif;color:#C9D3EA">02</span><span style="font:500 20px/1.5 'Zen Kaku Gothic New',sans-serif">専門性を高められる環境</span><span style="font:14px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;flex:1">各分野の眼科専門医が在籍。最新の手術・検査機器を揃え、これから専門を持つ人にも学びの機会があります。</span><span style="font:500 13px 'Zen Kaku Gothic New',sans-serif;color:#2A4E8F">医療設備を見る →</span></a>
+            <a href="About.dc.html#team" style="grid-column:span 2;background:#fff;border:1px solid #E2E5EB;border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:14px;min-height:280px;box-sizing:border-box"><span style="font:600 32px/1 'DM Sans',sans-serif;color:#C9D3EA">03</span><span style="font:500 20px/1.5 'Zen Kaku Gothic New',sans-serif">職種を越えたチーム医療</span><span style="font:14px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;flex:1">医師・視能訓練士・看護師・事務が同じ目線で患者様に向き合う。完全予約制で一人ひとりに時間をかける診療です。</span><span style="font:500 13px 'Zen Kaku Gothic New',sans-serif;color:#2A4E8F">チーム医療を見る →</span></a>
+            <a href="Environment.dc.html#skill" style="grid-column:span 3;background:#F2F4F8;border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:14px;min-height:240px;box-sizing:border-box"><span style="font:600 32px/1 'DM Sans',sans-serif;color:#C9D3EA">04</span><span style="font:500 20px/1.5 'Zen Kaku Gothic New',sans-serif">学び続けられる教育体制</span><span style="font:14px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;flex:1">新入社員研修・接遇研修・定期勉強会に加え、全国学会への参加費用を支給。知識を更新し続けられます。</span><span style="font:500 13px 'Zen Kaku Gothic New',sans-serif;color:#2A4E8F">スキルアップ支援を見る →</span></a>
+            <a href="Environment.dc.html" style="grid-column:span 3;background:#F2F4F8;border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:14px;min-height:240px;box-sizing:border-box"><span style="font:600 32px/1 'DM Sans',sans-serif;color:#C9D3EA">05</span><span style="font:500 20px/1.5 'Zen Kaku Gothic New',sans-serif">長く安心して働ける職場</span><span style="font:14px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;flex:1">平均残業は月2時間。有給消化を推進し、産休・育休からの復職も多数。ホワイト企業認定を取得しています。</span><span style="font:500 13px 'Zen Kaku Gothic New',sans-serif;color:#2A4E8F">働く環境を見る →</span></a>
+          </div>
+        </div>
+      </section>
+      <aside style="width:320px;flex:none;padding:40px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block;margin-bottom:8px">03 WHY SATO</b>5カードを3＋2で配置(6colグリッド)。上段＝医療の質、下段＝働く環境、と意味でも段を分ける。各カードは番号/タイトル/短文/導線で高さ揃え。</aside>
+    </div>
+
+    <div style="display:flex" data-screen-label="04 Job">
+      <section style="width:1440px;flex:none;padding:120px 0;background:#1F2433;color:#fff;box-sizing:border-box">
+        <div style="width:1160px;margin:0 auto">
+          <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#9FB4E0;margin:0 0 16px">JOB</p>
+          <h2 style="font:500 36px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0 0 20px;letter-spacing:.02em">仕事を知る</h2>
+          <p style="font:15px/1.9 'Zen Kaku Gothic New',sans-serif;color:#C9D3EA;margin:0 0 56px;max-width:640px">職種ごとに、担う役割も、磨ける専門性も違います。あなたの仕事が、患者様の「見える」をどう支えるのか。</p>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
+            <a href="Job.dc.html#doctor" style="display:flex;flex-direction:column;gap:0;color:#fff"><span style="background:repeating-linear-gradient(135deg,#2D3446 0 12px,#353D52 12px 24px);border-radius:12px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;margin-bottom:20px"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#C9D3EA;background:#1F2433;padding:6px 10px;border-radius:4px">PHOTO｜手術中の医師</span></span><span style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#9FB4E0;margin-bottom:10px">DOCTOR</span><span style="font:500 22px/1.4 'Zen Kaku Gothic New',sans-serif;margin-bottom:10px">医師</span><span style="font:14px/1.8 'Zen Kaku Gothic New',sans-serif;color:#C9D3EA;margin-bottom:16px">ほぼ全分野の手術に携わり、学会・論文の機会も豊富。週4日勤務が基本です。</span><span style="font:500 13px 'Zen Kaku Gothic New',sans-serif">詳しく見る →</span></a>
+            <a href="Job.dc.html#ort" style="display:flex;flex-direction:column;color:#fff"><span style="background:repeating-linear-gradient(135deg,#2D3446 0 12px,#353D52 12px 24px);border-radius:12px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;margin-bottom:20px"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#C9D3EA;background:#1F2433;padding:6px 10px;border-radius:4px">PHOTO｜OCT検査中の視能訓練士</span></span><span style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#9FB4E0;margin-bottom:10px">ORTHOPTIST</span><span style="font:500 22px/1.4 'Zen Kaku Gothic New',sans-serif;margin-bottom:10px">視能訓練士</span><span style="font:14px/1.8 'Zen Kaku Gothic New',sans-serif;color:#C9D3EA;margin-bottom:16px">最新の検査機器で幅広い症例に触れる、眼のプロフェッショナル。</span><span style="font:500 13px 'Zen Kaku Gothic New',sans-serif">詳しく見る →</span></a>
+            <a href="Job.dc.html#nurse" style="display:flex;flex-direction:column;color:#fff"><span style="background:repeating-linear-gradient(135deg,#2D3446 0 12px,#353D52 12px 24px);border-radius:12px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;margin-bottom:20px"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#C9D3EA;background:#1F2433;padding:6px 10px;border-radius:4px">PHOTO｜患者に声をかける看護師</span></span><span style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#9FB4E0;margin-bottom:10px">NURSE</span><span style="font:500 22px/1.4 'Zen Kaku Gothic New',sans-serif;margin-bottom:10px">看護師</span><span style="font:14px/1.8 'Zen Kaku Gothic New',sans-serif;color:#C9D3EA;margin-bottom:16px">外来と手術関連業務の両方で、患者様とともに歩む看護を。</span><span style="font:500 13px 'Zen Kaku Gothic New',sans-serif">詳しく見る →</span></a>
+            <a href="Job.dc.html#clerk" style="display:flex;flex-direction:column;color:#fff"><span style="background:repeating-linear-gradient(135deg,#2D3446 0 12px,#353D52 12px 24px);border-radius:12px;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;margin-bottom:20px"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#C9D3EA;background:#1F2433;padding:6px 10px;border-radius:4px">PHOTO｜受付で案内する医療事務</span></span><span style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#9FB4E0;margin-bottom:10px">MEDICAL CLERK</span><span style="font:500 22px/1.4 'Zen Kaku Gothic New',sans-serif;margin-bottom:10px">医療事務</span><span style="font:14px/1.8 'Zen Kaku Gothic New',sans-serif;color:#C9D3EA;margin-bottom:16px">人と人をつなぎ、患者様の心に寄り添う。院の最初の顔です。</span><span style="font:500 13px 'Zen Kaku Gothic New',sans-serif">詳しく見る →</span></a>
+          </div>
+        </div>
+      </section>
+      <aside style="width:320px;flex:none;padding:40px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block;margin-bottom:8px">04 JOB</b>ページ中央のダーク面で「人」の写真を大きく見せる山場。4カード横並び、写真3:4縦位置。<br><br>紹介文は2行以内で職種の核だけ。</aside>
+    </div>
+
+    <div style="display:flex" data-screen-label="05 Environment">
+      <section style="width:1440px;flex:none;padding:120px 0;box-sizing:border-box">
+        <div style="width:1160px;margin:0 auto;display:grid;grid-template-columns:400px 1fr;gap:64px;align-items:start">
+          <div>
+            <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">ENVIRONMENT</p>
+            <h2 style="font:500 36px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0 0 20px;letter-spacing:.02em">数字で見る、<br>働きやすさ</h2>
+            <p style="font:15px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0 0 32px">休みを取りやすい雰囲気と、子育て世代に合わせた勤務体系。制度だけでなく、実際の数字でお伝えします。</p>
+            <a href="Environment.dc.html" style="display:inline-flex;align-items:center;gap:10px;border:1px solid #1F2433;font:500 14px/1 'Zen Kaku Gothic New',sans-serif;padding:15px 26px;border-radius:999px">働く環境をもっと見る<span style="font-family:'DM Sans',sans-serif">→</span></a>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+            <div style="background:#F2F4F8;border-radius:12px;padding:28px;min-height:170px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between"><span style="font:13px/1.5 'Zen Kaku Gothic New',sans-serif;color:#5A6070">スタッフ数</span><span style="font:600 44px/1 'DM Sans',sans-serif;color:#2A4E8F">約70<span style="font:500 16px 'Zen Kaku Gothic New',sans-serif;color:#1F2433;margin-left:6px">名</span></span></div>
+            <div style="background:#F2F4F8;border-radius:12px;padding:28px;min-height:170px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between"><span style="font:13px/1.5 'Zen Kaku Gothic New',sans-serif;color:#5A6070">平均残業時間</span><span style="font:600 44px/1 'DM Sans',sans-serif;color:#2A4E8F">2<span style="font:500 16px 'Zen Kaku Gothic New',sans-serif;color:#1F2433;margin-left:6px">時間 / 月</span></span></div>
+            <div style="background:#F2F4F8;border-radius:12px;padding:28px;min-height:170px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between"><span style="font:13px/1.5 'Zen Kaku Gothic New',sans-serif;color:#5A6070">年間手術症例数（2025）</span><span style="font:600 44px/1 'DM Sans',sans-serif;color:#2A4E8F">4,760<span style="font:500 16px 'Zen Kaku Gothic New',sans-serif;color:#1F2433;margin-left:6px">例</span></span></div>
+            <div style="background:#F2F4F8;border-radius:12px;padding:28px;min-height:170px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between"><span style="font:13px/1.5 'Zen Kaku Gothic New',sans-serif;color:#5A6070">産休・育休後の復職</span><span style="font:500 22px/1.4 'Zen Kaku Gothic New',sans-serif;color:#2A4E8F">復職スタッフ多数<span style="display:inline-block;margin-left:8px;font:600 10px/1 'DM Sans',sans-serif;letter-spacing:.08em;color:#9A6B1F;background:#FBF3E2;padding:4px 6px;border-radius:4px;vertical-align:middle">要確認：実数</span></span></div>
+            <div style="background:#F2F4F8;border-radius:12px;padding:28px;min-height:170px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between"><span style="font:13px/1.5 'Zen Kaku Gothic New',sans-serif;color:#5A6070">学会参加支援</span><span style="font:600 44px/1 'DM Sans',sans-serif;color:#2A4E8F">年1〜2<span style="font:500 16px 'Zen Kaku Gothic New',sans-serif;color:#1F2433;margin-left:6px">回 費用支給</span></span></div>
+            <div style="background:#F2F4F8;border-radius:12px;padding:28px;min-height:170px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between"><span style="font:13px/1.5 'Zen Kaku Gothic New',sans-serif;color:#5A6070">第三者認定</span><span style="font:500 20px/1.4 'Zen Kaku Gothic New',sans-serif;color:#2A4E8F">ホワイト企業認定<span style="display:block;font:12px/1.5 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin-top:4px">日本次世代企業普及機構</span></span></div>
+          </div>
+        </div>
+      </section>
+      <aside style="width:320px;flex:none;padding:40px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block;margin-bottom:8px">05 ENVIRONMENT</b>左400pxに見出し＋CTA、右に3×2データカード。数字はDM Sans 44pxで強く、単位は和文16px。<br><br>数値は現行HP掲載値。「復職」は実数が無いため要確認タグ。</aside>
+    </div>
+
+    <div style="display:flex" data-screen-label="06 Clinic">
+      <section style="width:1440px;flex:none;padding:120px 0;background:#F2F4F8;box-sizing:border-box">
+        <div style="width:1160px;margin:0 auto">
+          <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">CLINIC</p>
+          <h2 style="font:500 36px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0 0 20px;letter-spacing:.02em">3つの院、ひとつのチーム</h2>
+          <p style="font:15px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0 0 56px;max-width:640px">2004年に荒尾で開院し、2019年に大牟田、そして熊本駅前へ。院は違っても、理念と医療の水準は同じです。</p>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+            <a href="About.dc.html#clinics" style="background:#fff;border-radius:12px;overflow:hidden;display:flex;flex-direction:column"><span style="background:repeating-linear-gradient(135deg,#E9ECF1 0 12px,#F1F3F7 12px 24px);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#5A6070;background:#fff;padding:6px 10px;border-radius:4px">PHOTO｜熊本院 待合室</span></span><span style="padding:24px 28px 28px;display:flex;flex-direction:column;gap:8px"><span style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#2A4E8F">KUMAMOTO</span><span style="font:500 20px/1.4 'Zen Kaku Gothic New',sans-serif">佐藤眼科 熊本</span><span style="font:13px/1.8 'Zen Kaku Gothic New',sans-serif;color:#5A6070">熊本市西区春日3-24-1 JR熊本春日北ビル1F<br>熊本駅隣接。最新設備を備えた新しい院。</span></span></a>
+            <a href="About.dc.html#clinics" style="background:#fff;border-radius:12px;overflow:hidden;display:flex;flex-direction:column"><span style="background:repeating-linear-gradient(135deg,#E9ECF1 0 12px,#F1F3F7 12px 24px);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#5A6070;background:#fff;padding:6px 10px;border-radius:4px">PHOTO｜大牟田院 外観</span></span><span style="padding:24px 28px 28px;display:flex;flex-direction:column;gap:8px"><span style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#2A4E8F">OMUTA</span><span style="font:500 20px/1.4 'Zen Kaku Gothic New',sans-serif">佐藤眼科 大牟田</span><span style="font:13px/1.8 'Zen Kaku Gothic New',sans-serif;color:#5A6070">福岡県大牟田市上屋敷町1丁目1-2<br>2019年開院。手術を担う中核の院。</span></span></a>
+            <a href="About.dc.html#clinics" style="background:#fff;border-radius:12px;overflow:hidden;display:flex;flex-direction:column"><span style="background:repeating-linear-gradient(135deg,#E9ECF1 0 12px,#F1F3F7 12px 24px);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#5A6070;background:#fff;padding:6px 10px;border-radius:4px">PHOTO｜荒尾院 外観</span></span><span style="padding:24px 28px 28px;display:flex;flex-direction:column;gap:8px"><span style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#2A4E8F">ARAO</span><span style="font:500 20px/1.4 'Zen Kaku Gothic New',sans-serif">佐藤眼科・内科（荒尾）</span><span style="font:13px/1.8 'Zen Kaku Gothic New',sans-serif;color:#5A6070">熊本県荒尾市荒尾4160-270<br>2004年開院のグループの原点。内科を併設。</span></span></a>
+          </div>
+        </div>
+      </section>
+      <aside style="width:320px;flex:none;padding:40px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block;margin-bottom:8px">06 CLINIC</b>3カード、写真4:3＋院名＋住所＋一言。「手術を担う中核」等の役割分担表現は要確認。</aside>
+    </div>
+
+    <div style="display:flex" data-screen-label="07 FAQ">
+      <section style="width:1440px;flex:none;padding:120px 0;box-sizing:border-box">
+        <div style="width:1160px;margin:0 auto;display:grid;grid-template-columns:360px 1fr;gap:64px;align-items:start">
+          <div>
+            <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">FAQ</p>
+            <h2 style="font:500 36px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0 0 20px;letter-spacing:.02em">よくある質問</h2>
+            <p style="font:15px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0 0 32px">応募前に気になることを、先にお答えします。ここにない質問は、お気軽にお問い合わせください。</p>
+            <a href="Environment.dc.html#faq" style="font:500 14px 'Zen Kaku Gothic New',sans-serif;color:#2A4E8F">すべての質問を見る →</a>
+          </div>
+          <div style="display:flex;flex-direction:column">
+            <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+              <div style="border-top:1px solid #E2E5EB;padding:28px 0;display:grid;grid-template-columns:40px 1fr 24px;gap:16px;align-items:start">
+                <span style="font:600 16px/1.5 'DM Sans',sans-serif;color:#2A4E8F">Q</span>
+                <div><p style="font:500 17px/1.6 'Zen Kaku Gothic New',sans-serif;margin:0">{{ f.q }}</p><p style="font:14px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:12px 0 0">{{ f.a }}</p></div>
+                <span style="font:20px/1 'DM Sans',sans-serif;color:#8A90A0;text-align:right">−</span>
+              </div>
+            </sc-for>
+            <div style="border-top:1px solid #E2E5EB"></div>
+          </div>
+        </div>
+      </section>
+      <aside style="width:320px;flex:none;padding:40px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block;margin-bottom:8px">07 FAQ</b>アコーディオン(初期は全開でワイヤー表示)。5問抜粋。回答文は現行HPの事実に基づく＋仮コピー。</aside>
+    </div>
+
+    <div style="display:flex" data-screen-label="08 Recruit Info">
+      <section style="width:1440px;flex:none;padding:120px 0;background:#F2F4F8;box-sizing:border-box">
+        <div style="width:1160px;margin:0 auto">
+          <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px">
+            <div><p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">RECRUIT INFO</p><h2 style="font:500 36px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0;letter-spacing:.02em">現在募集中の職種</h2></div>
+            <span style="font:12px 'DM Sans',sans-serif;color:#8A90A0">最終更新：2026.09.11<span style="margin-left:8px;font:600 10px/1 'DM Sans',sans-serif;letter-spacing:.08em;color:#9A6B1F;background:#FBF3E2;padding:4px 6px;border-radius:4px">要確認：募集状況</span></span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <sc-for list="{{ openings }}" as="o" hint-placeholder-count="5">
+              <a href="Recruit Info.dc.html" style="background:#fff;border-radius:12px;padding:24px 32px;display:grid;grid-template-columns:120px 1fr 200px 160px 24px;gap:24px;align-items:center">
+                <span style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.1em;color:{{ o.badgeColor }};background:{{ o.badgeBg }};padding:8px 10px;border-radius:999px;text-align:center">{{ o.status }}</span>
+                <span><span style="display:block;font:500 18px/1.4 'Zen Kaku Gothic New',sans-serif">{{ o.title }}</span><span style="font:13px/1.6 'Zen Kaku Gothic New',sans-serif;color:#5A6070">{{ o.sub }}</span></span>
+                <span style="font:13px/1.6 'Zen Kaku Gothic New',sans-serif;color:#5A6070">{{ o.type }}</span>
+                <span style="font:13px/1.6 'Zen Kaku Gothic New',sans-serif;color:#5A6070">{{ o.place }}</span>
+                <span style="font:18px 'DM Sans',sans-serif;color:#2A4E8F">→</span>
+              </a>
+            </sc-for>
+          </div>
+          <div style="margin-top:40px;text-align:center"><a href="Recruit Info.dc.html" style="display:inline-flex;align-items:center;gap:10px;background:#2A4E8F;color:#fff;font:500 15px/1 'Zen Kaku Gothic New',sans-serif;padding:18px 32px;border-radius:999px">募集要項をすべて見る<span style="font-family:'DM Sans',sans-serif">→</span></a></div>
+        </div>
+      </section>
+      <aside style="width:320px;flex:none;padding:40px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block;margin-bottom:8px">08 RECRUIT INFO</b>リスト型で「募集中/準備中」バッジと最終更新日で鮮度を表現。現行HPはスタッフ3職種が「※準備中」表記のため、状況要確認。</aside>
+    </div>
+
+    <div style="display:flex" data-screen-label="09 Entry / Footer">
+      <dc-import name="RecruitFooter" hint-size="1440px,800px"></dc-import>
+      <aside style="width:320px;flex:none;padding:40px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block;margin-bottom:8px">09 ENTRY CTA / FOOTER</b>ネイビー面で明確に区切り、見学/応募/問い合わせの3導線。全ページ共通。フッターに3院住所と電話。</aside>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const open = { badgeColor: '#fff', badgeBg: '#2A7A5A', status: '募集中' };
+    const prep = { badgeColor: '#9A6B1F', badgeBg: '#FBF3E2', status: '準備中' };
+    return {
+      faqs: [
+        { q: '職場見学はできますか？', a: 'はい。職場見学会を随時実施しています。医師・スタッフいずれも、まずはお電話またはフォームからお気軽にご連絡ください。' },
+        { q: '眼科未経験でも応募できますか？', a: '看護師・医療事務は眼科未経験の方も歓迎します。新入社員研修と定期勉強会で、眼科の知識を基礎から学べる体制を整えています。' },
+        { q: '配属先（院）はどのように決まりますか？', a: 'ご希望と通勤圏、各院の体制を踏まえてご相談のうえ決定します。（要確認：異動・兼務の運用）' },
+        { q: '子育てと両立できますか？', a: '産休・育休後に復職するスタッフが多数在籍。お子さんの学校行事や急な病気での休みも取りやすくしています。パートはシフトを柔軟に変更できます。' },
+        { q: '医師の非常勤勤務は相談できますか？', a: '週2〜3日、午前のみなどのご希望にも対応しています。詳細はお問い合わせください。' },
+      ],
+      openings: [
+        { ...open, title: '医師（眼科・常勤 / 非常勤）', sub: '年俸1,600万〜2,000万円（週4勤務・初年度）', type: '常勤・非常勤', place: '熊本 / 大牟田 / 荒尾' },
+        { ...prep, title: '視能訓練士', sub: '月給190,000〜240,000円', type: '常勤', place: '要確認' },
+        { ...prep, title: '看護師', sub: '月給210,000〜260,000円', type: '常勤', place: '要確認' },
+        { ...prep, title: '医療事務', sub: '月給160,000〜185,000円', type: '常勤', place: '要確認' },
+        { ...prep, title: 'その他（清掃）', sub: '詳細はお問い合わせください', type: 'パート', place: '要確認' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"><style>a{color:#1F2433;text-decoration:none}a:hover{color:#2A4E8F}</style></helmet>
+<header style="width:1440px;height:84px;box-sizing:border-box;background:transparent;border-bottom:1px solid #E2E5EB;display:flex;align-items:center;justify-content:space-between;padding:0 48px;font-family:'Zen Kaku Gothic New',sans-serif">
+  <a href="Recruit Top.dc.html" style="display:flex;align-items:center;gap:14px">
+    <span style="width:40px;height:40px;border-radius:10px;background:#2A4E8F;display:flex;align-items:center;justify-content:center;color:#fff;font:600 13px 'DM Sans',sans-serif">S</span>
+    <span style="display:flex;flex-direction:column;gap:2px">
+      <span style="font:700 17px/1 'Zen Kaku Gothic New',sans-serif;color:#1F2433;letter-spacing:.04em">佐藤眼科グループ</span>
+      <span style="font:600 10px/1 'DM Sans',sans-serif;letter-spacing:.2em;color:#2A4E8F">RECRUIT</span>
+    </span>
+  </a>
+  <nav style="display:flex;gap:36px;align-items:center">
+    <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="4">
+      <a href="{{ item.href }}" style="display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 0;border-bottom:2px solid {{ item.line }}">
+        <span style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:{{ item.color }}">{{ item.en }}</span>
+        <span style="font:400 11px/1 'Zen Kaku Gothic New',sans-serif;color:#8A90A0">{{ item.jp }}</span>
+      </a>
+    </sc-for>
+  </nav>
+  <div style="display:flex;gap:10px;align-items:center">
+    <a href="Entry.dc.html" style="display:inline-flex;align-items:center;height:44px;padding:0 20px;border:1px solid #1F2433;border-radius:999px;font:500 13px/1 'Zen Kaku Gothic New',sans-serif;color:#1F2433">医院見学を申し込む</a>
+    <a href="Entry.dc.html" style="display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 22px;background:#2A4E8F;border-radius:999px;font:500 13px/1 'Zen Kaku Gothic New',sans-serif;color:#fff">ENTRY<span style="font-family:'DM Sans',sans-serif">→</span></a>
+  </div>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:84},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;top&quot;,&quot;options&quot;:[&quot;top&quot;,&quot;about&quot;,&quot;job&quot;,&quot;environment&quot;,&quot;info&quot;,&quot;entry&quot;],&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const active = this.props.active ?? 'top';
+    const items = [
+      ['about','ABOUT','佐藤眼科について','About.dc.html'],
+      ['job','JOB','仕事を知る','Job.dc.html'],
+      ['environment','ENVIRONMENT','働く環境','Environment.dc.html'],
+      ['info','RECRUIT INFO','募集要項','Recruit Info.dc.html'],
+    ];
+    return { navItems: items.map(([k,en,jp,href]) => ({ en, jp, href, color: k===active ? '#2A4E8F' : '#1F2433', line: k===active ? '#2A4E8F' : 'transparent' })) };
+  }
+}
+</script>
+</body>
+</html>

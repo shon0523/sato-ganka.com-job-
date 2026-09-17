@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><meta name="design_doc_mode" content="canvas"><link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"><style>body{margin:0;background:#E9EBEF}a{color:#1F2433;text-decoration:none}a:hover{color:#2A4E8F}</style></helmet>
+<div style="padding:48px;min-width:1856px;box-sizing:border-box;font-family:'Zen Kaku Gothic New',sans-serif;color:#1F2433">
+  <div style="width:1760px;display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:20px">
+    <div><a href="Index.dc.html" style="font:12px 'DM Sans',sans-serif;color:#5A6070">← INDEX</a><h1 style="font:500 22px/1.3 'Zen Kaku Gothic New',sans-serif;margin:8px 0 0">④ ENVIRONMENT｜働く環境を知る <span style="font:400 13px 'DM Sans',sans-serif;color:#8A90A0;margin-left:12px">/recruit/environment/</span></h1></div>
+    <nav style="display:flex;gap:16px;font:12px 'DM Sans',sans-serif"><a href="Recruit Top.dc.html">① TOP</a><a href="About.dc.html">② ABOUT</a><a href="Job.dc.html">③ JOB</a><a href="Recruit Info.dc.html">⑤ RECRUIT INFO</a><a href="Entry.dc.html">⑥ ENTRY</a></nav>
+  </div>
+  <div style="width:1760px;background:#FBFBFC;box-shadow:0 8px 40px rgba(0,0,0,.08);display:flex;flex-direction:column">
+
+    <div style="display:flex;position:sticky;top:0;z-index:20;background:rgba(251,251,252,.92);backdrop-filter:blur(8px)" data-screen-label="Header"><dc-import name="RecruitHeader" active="environment" hint-size="1440px,84px"></dc-import><aside style="width:320px;flex:none;border-left:1px dashed #D5D9E0"></aside></div>
+
+    <div style="display:flex" data-screen-label="01 Title">
+      <section style="width:1440px;flex:none;padding:96px 0 0;box-sizing:border-box">
+        <div style="width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 480px;gap:64px;align-items:end">
+          <div>
+            <p style="font:12px 'DM Sans',sans-serif;color:#8A90A0;margin:0 0 40px">RECRUIT TOP <span style="margin:0 8px">/</span> ENVIRONMENT</p>
+            <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.16em;color:#2A4E8F;margin:0 0 20px">ENVIRONMENT</p>
+            <h2 style="font:500 48px/1.4 'Zen Kaku Gothic New',sans-serif;margin:0 0 28px;letter-spacing:.02em">働く環境を知る</h2>
+            <p style="font:16px/2 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0;max-width:600px">良い医療は、スタッフ自身が心身ともに充実して働ける環境から。休みを取りやすい雰囲気、子育て世代に合わせた勤務体系、学び続けるための支援。制度と実際の数字でお伝えします。</p>
+          </div>
+          <div style="background:repeating-linear-gradient(135deg,#E9ECF1 0 12px,#F1F3F7 12px 24px);border-radius:16px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#5A6070;background:#fff;padding:6px 10px;border-radius:4px">PHOTO｜休憩室で談笑するスタッフ</span></div>
+        </div>
+      </section>
+      <aside style="width:320px;flex:none;padding:40px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block;margin-bottom:8px">01 TITLE</b>左見出し＋右480px写真。ABOUTの横長KVとはリズムを変える。</aside>
+    </div>
+
+    <div style="display:flex" data-screen-label="02 Numbers">
+      <section style="width:1440px;flex:none;padding:120px 0;box-sizing:border-box">
+        <div style="width:1160px;margin:0 auto">
+          <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">NUMBERS</p>
+          <h2 style="font:500 36px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0 0 20px;letter-spacing:.02em">数字で見る佐藤眼科</h2>
+          <p style="font:15px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0 0 56px;max-width:640px">現行HPで公開している数値を中心に構成。「要確認」の項目は実データの提供をお願いします。</p>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
+            <sc-for list="{{ numbers }}" as="n" hint-placeholder-count="8">
+              <div style="background:#F2F4F8;border-radius:12px;padding:28px;min-height:190px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between">
+                <span style="font:13px/1.5 'Zen Kaku Gothic New',sans-serif;color:#5A6070">{{ n.label }}</span>
+                <span><span style="font:600 44px/1 'DM Sans',sans-serif;color:#2A4E8F">{{ n.value }}</span><span style="font:500 15px 'Zen Kaku Gothic New',sans-serif;margin-left:6px">{{ n.unit }}</span></span>
+                <span style="font:12px/1.5 'Zen Kaku Gothic New',sans-serif;color:#8A90A0">{{ n.note }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+      <aside style="width:320px;flex:none;padding:40px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block;margin-bottom:8px">02 NUMBERS</b>4×2データカード。確定値：約70名 / 残業2h / 学会1〜2回 / ホワイト企業認定 / 週休3日(医師)。要確認：平均有給取得日数 / 復職率 / 平均勤続年数。</aside>
+    </div>
+
+    <div style="display:flex" data-screen-label="03 Work Style">
+      <section style="width:1440px;flex:none;padding:120px 0;background:#F2F4F8;box-sizing:border-box">
+        <div style="width:1160px;margin:0 auto">
+          <div style="display:grid;grid-template-columns:400px 1fr;gap:64px;margin-bottom:56px">
+            <div><p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">WORK STYLE</p><h2 style="font:500 36px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0;letter-spacing:.02em">働き方の特徴</h2></div>
+            <p style="font:15px/2 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0;max-width:640px">みんなで協力し合い、休みを取りやすい環境をつくる。それが佐藤眼科の働き方の基本です。</p>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+            <sc-for list="{{ workStyles }}" as="w" hint-placeholder-count="6">
+              <div style="background:#fff;border-radius:12px;padding:32px;min-height:220px;box-sizing:border-box;display:flex;flex-direction:column;gap:14px">
+                <span style="width:44px;height:44px;border-radius:12px;background:#E6ECF7;display:flex;align-items:center;justify-content:center;font:600 12px 'DM Sans',sans-serif;color:#2A4E8F">{{ w.no }}</span>
+                <span style="font:500 20px/1.5 'Zen Kaku Gothic New',sans-serif">{{ w.title }}</span>
+                <span style="font:14px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070">{{ w.body }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+      <aside style="width:320px;flex:none;padding:40px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block;margin-bottom:8px">03 WORK STYLE</b>現行「福利厚生」冒頭の6項目(土曜/有給/産休育休/急な休み/残業/パート)をカード化。アイコン枠は番号で代用(本番はラインアイコン)。</aside>
+    </div>
+
+    <div style="display:flex" data-screen-label="04 Benefits">
+      <section style="width:1440px;flex:none;padding:120px 0;box-sizing:border-box">
+        <div style="width:1160px;margin:0 auto;display:grid;grid-template-columns:400px 1fr;gap:64px;align-items:start">
+          <div>
+            <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">BENEFITS</p>
+            <h2 style="font:500 36px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0 0 20px;letter-spacing:.02em">福利厚生</h2>
+            <p style="font:15px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0 0 32px">健康を第一に考え、安心して働ける制度を整えています。</p>
+            <div style="background:repeating-linear-gradient(135deg,#E9ECF1 0 12px,#F1F3F7 12px 24px);border-radius:12px;aspect-ratio:1;display:flex;align-items:center;justify-content:center"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#5A6070;background:#fff;padding:6px 10px;border-radius:4px">PHOTO｜部署親睦会の様子</span></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+            <sc-for list="{{ benefits }}" as="b" hint-placeholder-count="6">
+              <div style="border:1px solid #E2E5EB;border-radius:12px;padding:28px;box-sizing:border-box;display:flex;flex-direction:column;gap:10px"><span style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#2A4E8F">{{ b.en }}</span><span style="font:500 18px/1.5 'Zen Kaku Gothic New',sans-serif">{{ b.title }}</span><span style="font:14px/1.8 'Zen Kaku Gothic New',sans-serif;color:#5A6070">{{ b.body }}</span></div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+      <aside style="width:320px;flex:none;padding:40px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block;margin-bottom:8px">04 BENEFITS</b>現行HP4制度(健康診断/医療補助/コンタクト割引/レクリエーション)＋募集条件から2項目(通勤手当・駐車場/制服貸与)を構造化。</aside>
+    </div>
+
+    <div style="display:flex" data-screen-label="05 Skill Up">
+      <section id="skill" style="width:1440px;flex:none;padding:120px 0;background:#1F2433;color:#fff;box-sizing:border-box">
+        <div style="width:1160px;margin:0 auto">
+          <div style="display:grid;grid-template-columns:400px 1fr;gap:64px;margin-bottom:56px">
+            <div><p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#9FB4E0;margin:0 0 16px">SKILL UP</p><h2 style="font:500 36px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0;letter-spacing:.02em">スキルアップ支援</h2></div>
+            <p style="font:15px/2 'Zen Kaku Gothic New',sans-serif;color:#C9D3EA;margin:0;max-width:640px">眼科医療の知識だけでなく、社会人として、一人の人間として成長できるように。研修と学会参加を継続的に支援しています。</p>
+          </div>
+          <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:24px">
+            <div style="background:#2A4E8F;border-radius:12px;padding:32px;min-height:260px;box-sizing:border-box;display:flex;flex-direction:column;gap:12px"><span style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#C9D3EA">CONFERENCE</span><span style="font:500 22px/1.5 'Zen Kaku Gothic New',sans-serif">学会参加支援</span><span style="font:14px/1.9 'Zen Kaku Gothic New',sans-serif;color:#DDE4F3;flex:1">年に1〜2回、全国学会への参加を推奨。交通費・宿泊費・参加登録費は院が支給します。医師は海外学会も対象。</span><span style="font:600 28px/1 'DM Sans',sans-serif">年1〜2回</span></div>
+            <div style="border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:32px;min-height:260px;box-sizing:border-box;display:flex;flex-direction:column;gap:12px"><span style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#9FB4E0">ONBOARDING</span><span style="font:500 20px/1.5 'Zen Kaku Gothic New',sans-serif">新入社員研修</span><span style="font:14px/1.9 'Zen Kaku Gothic New',sans-serif;color:#C9D3EA">眼科の基礎知識、院の理念と流れを入職時にまとめて学びます。</span></div>
+            <div style="border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:32px;min-height:260px;box-sizing:border-box;display:flex;flex-direction:column;gap:12px"><span style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#9FB4E0">HOSPITALITY</span><span style="font:500 20px/1.5 'Zen Kaku Gothic New',sans-serif">接遇研修</span><span style="font:14px/1.9 'Zen Kaku Gothic New',sans-serif;color:#C9D3EA">患者様に寄り添う対応を、全職種共通で磨きます。</span></div>
+            <div style="border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:32px;min-height:260px;box-sizing:border-box;display:flex;flex-direction:column;gap:12px"><span style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#9FB4E0">STUDY</span><span style="font:500 20px/1.5 'Zen Kaku Gothic New',sans-serif">定期的な院内勉強会</span><span style="font:14px/1.9 'Zen Kaku Gothic New',sans-serif;color:#C9D3EA">新しい術式・機器・疾患知識を定期的にアップデート。</span></div>
+          </div>
+        </div>
+      </section>
+      <aside style="width:320px;flex:none;padding:40px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block;margin-bottom:8px">05 SKILL UP</b>ダーク面。学会支援を主カード(アクセント塗り)、研修3つを従カードに。すべて現行HP記載事実。</aside>
+    </div>
+
+    <div style="display:flex" data-screen-label="06 Doctor Work Style">
+      <section style="width:1440px;flex:none;padding:120px 0;box-sizing:border-box">
+        <div style="width:1160px;margin:0 auto">
+          <div style="border:1px solid #E2E5EB;border-radius:16px;padding:56px;display:grid;grid-template-columns:360px 1fr;gap:64px;box-sizing:border-box">
+            <div>
+              <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">FOR DOCTORS</p>
+              <h2 style="font:500 32px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0 0 20px;letter-spacing:.02em">医師の働き方</h2>
+              <p style="font:15px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0 0 28px">専門性を磨くことと、暮らしを守ること。どちらも諦めない働き方を用意しています。</p>
+              <a href="Job.dc.html#doctor" style="font:500 14px 'Zen Kaku Gothic New',sans-serif;color:#2A4E8F">医師の仕事を詳しく見る →</a>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 40px">
+              <sc-for list="{{ drPoints }}" as="p" hint-placeholder-count="6">
+                <div style="display:grid;grid-template-columns:130px 1fr;gap:16px;padding:18px 0;border-top:1px solid #E2E5EB"><span style="font:500 14px/1.6 'Zen Kaku Gothic New',sans-serif;color:#2A4E8F">{{ p.k }}</span><span style="font:14px/1.7 'Zen Kaku Gothic New',sans-serif;color:#1F2433">{{ p.v }}</span></div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </section>
+      <aside style="width:320px;flex:none;padding:40px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block;margin-bottom:8px">06 DOCTOR</b>医師だけ枠線ボックスで別扱い。要点整理型(定義リスト2列)。詳細はJOB医師へ委ねる。</aside>
+    </div>
+
+    <div style="display:flex" data-screen-label="07 FAQ">
+      <section id="faq" style="width:1440px;flex:none;padding:120px 0;background:#F2F4F8;box-sizing:border-box">
+        <div style="width:1160px;margin:0 auto;display:grid;grid-template-columns:360px 1fr;gap:64px;align-items:start">
+          <div><p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">FAQ</p><h2 style="font:500 36px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0 0 20px;letter-spacing:.02em">よくある質問</h2><p style="font:15px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0">働く環境について、よくいただく質問です。</p></div>
+          <div style="display:flex;flex-direction:column;background:#fff;border-radius:12px;padding:8px 32px">
+            <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="8">
+              <div style="border-bottom:1px solid #E2E5EB;padding:24px 0;display:grid;grid-template-columns:32px 1fr 24px;gap:16px;align-items:start">
+                <span style="font:600 15px/1.6 'DM Sans',sans-serif;color:#2A4E8F">Q</span>
+                <div><p style="font:500 16px/1.6 'Zen Kaku Gothic New',sans-serif;margin:0">{{ f.q }}</p><p style="font:14px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:10px 0 0">{{ f.a }}</p></div>
+                <span style="font:20px/1 'DM Sans',sans-serif;color:#8A90A0;text-align:right">−</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+      <aside style="width:320px;flex:none;padding:40px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block;margin-bottom:8px">07 FAQ</b>TOP抜粋の全量版(8問)。アコーディオン。<br><br><b style="color:#1F2433">必要素材</b><br>・休憩室/親睦会の写真<br>・数値データ(有給取得/復職/勤続)</aside>
+    </div>
+
+    <div style="display:flex"><dc-import name="RecruitFooter" hint-size="1440px,800px"></dc-import><aside style="width:320px;flex:none;border-left:1px dashed #D5D9E0"></aside></div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      numbers: [
+        { label:'スタッフ数', value:'約70', unit:'名', note:'医師・ORT・看護師・事務 グループ合計' },
+        { label:'平均残業時間', value:'2', unit:'時間 / 月', note:'ホワイト企業認定取得' },
+        { label:'週休', value:'2〜3', unit:'日', note:'スタッフ週休2日制 / 医師週休3日制' },
+        { label:'土曜勤務', value:'自由', unit:'出勤', note:'ライフスタイルに合わせて選択' },
+        { label:'学会参加支援', value:'年1〜2', unit:'回', note:'交通費・宿泊費・登録費を支給' },
+        { label:'産休・育休後の復職', value:'—', unit:'%', note:'要確認：復職率または人数' },
+        { label:'有給休暇 取得日数', value:'—', unit:'日 / 年', note:'要確認：平均取得日数' },
+        { label:'平均勤続年数', value:'—', unit:'年', note:'要確認' },
+      ],
+      workStyles: [
+        { no:'01', title:'土曜勤務は選べる', body:'土曜日の勤務はライフスタイルに合わせて選択できます（土曜は自由出勤）。' },
+        { no:'02', title:'有給消化を推進', body:'休みを取りやすい環境と雰囲気を、みんなでつくっています。' },
+        { no:'03', title:'産休・育休が取りやすい', body:'協力し合う文化があり、産休・育休後に復職するスタッフも多数。サポート体制は整っています。' },
+        { no:'04', title:'子育てとの両立', body:'お子さんの学校行事、急な病気やけがでの休みも取りやすくしています。' },
+        { no:'05', title:'残業は月平均2時間', body:'完全予約制の運営で、残業の少ない職場を実現しています。' },
+        { no:'06', title:'パートはシフト柔軟', body:'パートスタッフは勤務シフトをライフスタイルに合わせて自由に変更できます。' },
+      ],
+      benefits: [
+        { en:'HEALTH CHECK', title:'健康診断', body:'年1回、当院で行う健康診断の費用を負担します。' },
+        { en:'MEDICAL SUPPORT', title:'医療補助', body:'職員・家族が当院で受診した医療費を補助。定期検診後の再検査・精密検査にも適用。' },
+        { en:'CONTACT LENS', title:'コンタクト割引制度', body:'コンタクトレンズを社員価格で提供します。' },
+        { en:'RECREATION', title:'レクリエーション制度', body:'看護部・受付事務部・視能訓練士部で年4回、部署毎の親睦会の飲食代を補助。' },
+        { en:'COMMUTE', title:'通勤手当・無料駐車場', body:'通勤手当は規定により支給（上限15,000円）。マイカー通勤可、無料駐車場あり。' },
+        { en:'UNIFORM', title:'制服・シューズ貸与', body:'制服とシューズを貸与します。' },
+      ],
+      drPoints: [
+        { k:'基本勤務', v:'週4日勤務（月〜金のうち4日）、週休3日制' },
+        { k:'勤務時間', v:'8:45〜17:45（休憩1時間45分）。基本的に残業なし' },
+        { k:'土曜日', v:'8:45〜12:30 自由出勤' },
+        { k:'非常勤', v:'週2〜3日、午前のみ等のご希望も相談可' },
+        { k:'学会', v:'国内・海外学会の交通費・宿泊費・登録費を院内規定で支給' },
+        { k:'書籍・資料', v:'必要なものは病院で購入' },
+      ],
+      faqs: [
+        { q:'職場見学はできますか？', a:'はい。職場見学会を随時実施しています。まずはお電話またはフォームからご連絡ください。' },
+        { q:'眼科未経験でも応募できますか？', a:'看護師・医療事務は眼科未経験の方も歓迎します。新入社員研修と定期勉強会で基礎から学べます。' },
+        { q:'配属先はどのように決まりますか？', a:'ご希望と通勤圏、各院の体制を踏まえてご相談のうえ決定します。（要確認：異動・兼務の運用）' },
+        { q:'子育てと両立できますか？', a:'産休・育休後に復職するスタッフが多数在籍。学校行事や急な病気での休みも取りやすくしています。' },
+        { q:'残業はどのくらいありますか？', a:'平均で月2時間程度です。完全予約制のため診療終了時刻が読みやすく、定時退勤が基本です。' },
+        { q:'土曜日は必ず出勤ですか？', a:'いいえ。土曜勤務はライフスタイルに合わせて選べます。出勤した場合は回数に応じた手当があります。' },
+        { q:'学会や研修には参加できますか？', a:'年1〜2回の全国学会参加を推奨し、費用は院が支給します。院内でも定期的に勉強会を行っています。' },
+        { q:'医師の非常勤勤務は相談できますか？', a:'週2〜3日、午前のみなどのご希望にも対応しています。詳細はお問い合わせください。' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
