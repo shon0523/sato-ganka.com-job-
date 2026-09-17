@@ -8,14 +8,14 @@
 <body>
 <x-dc>
 <helmet><meta name="design_doc_mode" content="canvas"><link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"><style>body{margin:0;background:#E9EBEF}a{color:#1F2433;text-decoration:none}a:hover{color:#2A4E8F}</style></helmet>
-<div style="padding:48px;min-width:1856px;box-sizing:border-box;font-family:'Zen Kaku Gothic New',sans-serif;color:#1F2433">
-  <div style="width:1760px;display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:20px">
+<div style="padding:48px;min-width:1536px;box-sizing:border-box;font-family:'Zen Kaku Gothic New',sans-serif;color:#1F2433">
+  <div style="width:1440px;display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:20px">
     <div><a href="Index.dc.html" style="font:12px 'DM Sans',sans-serif;color:#5A6070">← INDEX</a><h1 style="font:500 22px/1.3 'Zen Kaku Gothic New',sans-serif;margin:8px 0 0">⑤ RECRUIT INFO｜募集要項 <span style="font:400 13px 'DM Sans',sans-serif;color:#8A90A0;margin-left:12px">/recruit/info/</span></h1></div>
     <nav style="display:flex;gap:16px;font:12px 'DM Sans',sans-serif"><a href="Recruit Top.dc.html">① TOP</a><a href="About.dc.html">② ABOUT</a><a href="Job.dc.html">③ JOB</a><a href="Environment.dc.html">④ ENVIRONMENT</a><a href="Entry.dc.html">⑥ ENTRY</a></nav>
   </div>
-  <div style="width:1760px;background:#FBFBFC;box-shadow:0 8px 40px rgba(0,0,0,.08);display:flex;flex-direction:column">
+  <div style="width:1440px;background:#FBFBFC;box-shadow:0 8px 40px rgba(0,0,0,.08);display:flex;flex-direction:column">
 
-    <div style="display:flex;position:sticky;top:0;z-index:20;background:rgba(251,251,252,.92);backdrop-filter:blur(8px)" data-screen-label="Header"><dc-import name="RecruitHeader" active="info" hint-size="1440px,84px"></dc-import><aside style="width:320px;flex:none;border-left:1px dashed #D5D9E0"></aside></div>
+    <div style="display:flex;position:sticky;top:0;z-index:20;background:rgba(251,251,252,.92);backdrop-filter:blur(8px)" data-screen-label="Header"><dc-import name="RecruitHeader" active="info" hint-size="1440px,84px"></dc-import></div>
 
     <div style="display:flex" data-screen-label="01 Title + Job Nav">
       <section style="width:1440px;flex:none;padding:96px 0 0;box-sizing:border-box">
@@ -36,7 +36,7 @@
           </div>
         </div>
       </section>
-      <aside style="width:320px;flex:none;padding:40px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block;margin-bottom:8px">01 TITLE + TABS</b>職種タブ5つ＋募集状況バッジ。クリックで下の募集要項が切り替わる(選択中＝アクセント枠＋淡色地)。更新日を明示して鮮度を担保。<br><br>※このワイヤーではタブをクリックして切り替え可能。Tweaksの「showAll」で全職種を縦に展開表示。<br><br>現行HPではスタッフ3職種に「※準備中」表記 → 「準備中」バッジで表現。実状況は要確認。</aside>
+      
     </div>
 
     <sc-if value="{{ showDoctor }}" hint-placeholder-val="{{ true }}">
@@ -75,7 +75,7 @@
           </div>
         </div>
       </section>
-      <aside style="width:320px;flex:none;padding:40px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block;margin-bottom:8px">02 DOCTOR（タブ1・初期表示）</b>職種ブロック共通レイアウト：左320px追従カラム(職種名/状況/CTA) ＋ 右に雇用形態ごとの情報ブロック。<br>項目名(グレー) / 値(16px) / 補足(13px淡色)で強弱。<br><br>全数値は現行「医師募集」より転記。</aside>
+      
     </div>
     </sc-if>
 
@@ -113,7 +113,7 @@
           </sc-if>
         </div>
       </section>
-      <aside style="width:320px;flex:none;padding:40px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block;margin-bottom:8px">03 STAFF（タブ2〜4）/ OTHERS（タブ5）</b>視能訓練士／看護師／医療事務は同フォーマット。給与・通勤手当・勤務時間・休日・賞与・保険・その他の7項目を統一順で並べ、タブ切替でも比較しやすく。<br><br>「現在募集なし」は点線枠＋グレーバッジで控えめに。<br><br>年齢制限(35歳以下・長期勤続キャリア形成)は法令上の例外事由記載が必要 → 表記要確認。</aside>
+      
     </div>
     </sc-if>
 
@@ -129,7 +129,7 @@
           </div>
         </div>
       </section>
-      <aside style="width:320px;flex:none;padding:40px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block;margin-bottom:8px">04 OTHER POSITIONS</b>タブ内容の末尾に、表示中以外の4職種の導線を「◯◯の募集要項」の文言＋募集状況バッジで再掲(4カラム)。クリックでタブ切替＋上部タブ位置へスクロール。</aside>
+      
     </div>
 
     <div style="display:flex" data-screen-label="05 Contact / Visit">
@@ -150,10 +150,10 @@
           </div>
         </div>
       </section>
-      <aside style="width:320px;flex:none;padding:40px 28px;border-left:1px dashed #D5D9E0;font:12px/1.8 ui-monospace,Menlo,monospace;color:#5A6070;box-sizing:border-box"><b style="color:#1F2433;display:block;margin-bottom:8px">05 CONTACT / VISIT</b>電話番号を大きく。見学カードはアクセント塗りで行動を促す。電話受付時間は要確認。</aside>
+      
     </div>
 
-    <div style="display:flex"><dc-import name="RecruitFooter" hint-size="1440px,800px"></dc-import><aside style="width:320px;flex:none;border-left:1px dashed #D5D9E0"></aside></div>
+    <div style="display:flex"><dc-import name="RecruitFooter" hint-size="1440px,800px"></dc-import></div>
   </div>
 </div>
 </x-dc>
