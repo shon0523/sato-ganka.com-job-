@@ -24,8 +24,8 @@
           <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.16em;color:#2A4E8F;margin:0 0 20px">ENTRY</p>
           <h2 style="font:500 48px/1.4 'Zen Kaku Gothic New',sans-serif;margin:0 0 28px;letter-spacing:.02em">エントリー</h2>
           <p style="font:16px/2 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0 0 64px;max-width:640px">ご希望の内容をお選びください。応募の前に見学だけ、質問だけでも構いません。担当より原則3営業日以内にご連絡します。<span style="margin-left:8px;font:600 10px/1 'DM Sans',sans-serif;letter-spacing:.08em;color:#9A6B1F;background:#FBF3E2;padding:4px 6px;border-radius:4px;vertical-align:middle">要確認：返信日数</span></p>
-          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
-            <sc-for list="{{ choices }}" as="c" hint-placeholder-count="4">
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+            <sc-for list="{{ choices }}" as="c" hint-placeholder-count="3">
               <a href="#form" style="border:2px solid {{ c.border }};background:{{ c.bg }};border-radius:12px;padding:32px 28px;display:flex;flex-direction:column;gap:12px;min-height:220px;box-sizing:border-box;position:relative">
                 <span style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#2A4E8F">{{ c.en }}</span>
                 <span style="font:500 22px/1.4 'Zen Kaku Gothic New',sans-serif">{{ c.title }}</span>
@@ -55,7 +55,7 @@
             <p style="font:13px/1.8 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:24px 0 0">お電話でも受け付けています<br><b style="font:600 20px 'DM Sans',sans-serif;color:#1F2433">0944-55-1100</b><br>佐藤眼科事務室 担当：前田・永田</p>
           </div>
           <div style="background:#fff;border-radius:16px;padding:48px;box-sizing:border-box;display:flex;flex-direction:column;gap:28px">
-            <div style="display:flex;flex-direction:column;gap:10px"><label style="font:500 14px 'Zen Kaku Gothic New',sans-serif">ご希望の職種 <span style="color:#B3261E">＊</span></label><div style="display:flex;gap:10px;flex-wrap:wrap"><span style="font:14px 'Zen Kaku Gothic New',sans-serif;padding:10px 18px;border-radius:999px;background:#2A4E8F;color:#fff">医師</span><span style="font:14px 'Zen Kaku Gothic New',sans-serif;padding:10px 18px;border-radius:999px;border:1px solid #C9CFD8">視能訓練士</span><span style="font:14px 'Zen Kaku Gothic New',sans-serif;padding:10px 18px;border-radius:999px;border:1px solid #C9CFD8">看護師</span><span style="font:14px 'Zen Kaku Gothic New',sans-serif;padding:10px 18px;border-radius:999px;border:1px solid #C9CFD8">医療事務</span><span style="font:14px 'Zen Kaku Gothic New',sans-serif;padding:10px 18px;border-radius:999px;border:1px solid #C9CFD8">その他・未定</span></div></div>
+            <div style="display:flex;flex-direction:column;gap:10px"><label style="font:500 14px 'Zen Kaku Gothic New',sans-serif">ご希望の職種 <span style="color:#B3261E">＊</span></label><div style="display:flex;gap:10px;flex-wrap:wrap"><span style="font:14px 'Zen Kaku Gothic New',sans-serif;padding:10px 18px;border-radius:999px;background:#2A4E8F;color:#fff">視能訓練士</span><span style="font:14px 'Zen Kaku Gothic New',sans-serif;padding:10px 18px;border-radius:999px;border:1px solid #C9CFD8">看護師</span><span style="font:14px 'Zen Kaku Gothic New',sans-serif;padding:10px 18px;border-radius:999px;border:1px solid #C9CFD8">医療事務</span><span style="font:14px 'Zen Kaku Gothic New',sans-serif;padding:10px 18px;border-radius:999px;border:1px solid #C9CFD8">その他・未定</span></div></div>
             <div style="display:flex;flex-direction:column;gap:10px"><label style="font:500 14px 'Zen Kaku Gothic New',sans-serif">見学希望の院 <span style="color:#B3261E">＊</span></label><div style="display:flex;gap:10px;flex-wrap:wrap"><span style="font:14px 'Zen Kaku Gothic New',sans-serif;padding:10px 18px;border-radius:999px;border:1px solid #C9CFD8">熊本院</span><span style="font:14px 'Zen Kaku Gothic New',sans-serif;padding:10px 18px;border-radius:999px;border:1px solid #C9CFD8">大牟田院</span><span style="font:14px 'Zen Kaku Gothic New',sans-serif;padding:10px 18px;border-radius:999px;border:1px solid #C9CFD8">荒尾院</span><span style="font:14px 'Zen Kaku Gothic New',sans-serif;padding:10px 18px;border-radius:999px;border:1px solid #C9CFD8">相談したい</span></div></div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
               <div style="display:flex;flex-direction:column;gap:10px"><label style="font:500 14px 'Zen Kaku Gothic New',sans-serif">お名前 <span style="color:#B3261E">＊</span></label><span style="height:52px;border:1px solid #C9CFD8;border-radius:8px;padding:0 16px;display:flex;align-items:center;font:14px 'Zen Kaku Gothic New',sans-serif;color:#8A90A0">山田 花子</span></div>
@@ -87,7 +87,6 @@ class Component extends DCLogic {
     const off = { border:'#E2E5EB', bg:'#fff', dot:'transparent' };
     const on = { border:'#2A4E8F', bg:'#E6ECF7', dot:'#2A4E8F' };
     return { choices: [
-      { ...off, en:'DOCTOR', title:'医師応募', body:'常勤・非常勤の眼科医、内科医の応募。専門分野やご希望の勤務日数もお知らせください。' },
       { ...off, en:'STAFF', title:'スタッフ応募', body:'視能訓練士・看護師・医療事務、その他職種の応募。新卒・既卒いずれも歓迎します。' },
       { ...on, en:'VISIT', title:'医院見学', body:'職場見学会のお申し込み。応募前の見学だけでも歓迎です。希望院と日程をお選びください。' },
       { ...off, en:'CONTACT', title:'お問い合わせ', body:'募集条件や働き方に関するご質問など。まずは気になることをお聞かせください。' },

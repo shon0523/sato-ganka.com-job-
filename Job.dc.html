@@ -23,9 +23,9 @@
           <p style="font:12px 'DM Sans',sans-serif;color:#8A90A0;margin:0 0 40px">RECRUIT TOP <span style="margin:0 8px">/</span> JOB</p>
           <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.16em;color:#2A4E8F;margin:0 0 20px">JOB</p>
           <h2 style="font:500 48px/1.4 'Zen Kaku Gothic New',sans-serif;margin:0 0 28px;letter-spacing:.02em">仕事を知る</h2>
-          <p style="font:16px/2 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0 0 64px;max-width:640px">佐藤眼科には4つの職種があります。それぞれが何を担い、どんな専門性を磨けるのか。ここで働く自分を、具体的に想像してみてください。</p>
-          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;border-bottom:1px solid #E2E5EB">
-            <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="4">
+          <p style="font:16px/2 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0 0 64px;max-width:640px">佐藤眼科には3つの職種があります。それぞれが何を担い、どんな専門性を磨けるのか。ここで働く自分を、具体的に想像してみてください。</p>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;border-bottom:1px solid #E2E5EB">
+            <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="3">
               <a href="#" onClick="{{ t.onClick }}" style="display:flex;flex-direction:column;gap:6px;padding:0 0 20px;border-bottom:2px solid {{ t.line }};margin-bottom:-1px;cursor:pointer"><span style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:{{ t.enColor }}">{{ t.en }}</span><span style="font:500 18px/1.4 'Zen Kaku Gothic New',sans-serif;color:{{ t.jpColor }}">{{ t.jp }}</span></a>
             </sc-for>
           </div>
@@ -34,90 +34,14 @@
       
     </div>
 
-    <sc-if value="{{ showDoctor }}" hint-placeholder-val="{{ true }}">
-    <div style="display:flex" data-screen-label="02 Doctor">
-      <section id="doctor" style="width:1440px;flex:none;padding:96px 0 120px;box-sizing:border-box">
-        <div style="width:1160px;margin:0 auto">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:96px">
-            <div>
-              <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">01 DOCTOR</p>
-              <h2 style="font:500 40px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0 0 24px;letter-spacing:.02em">医師</h2>
-              <p style="font:500 22px/1.7 'Zen Kaku Gothic New',sans-serif;margin:0 0 20px">ほぼ全分野の手術に携わり、<br>専門性を深められる場所。</p>
-              <p style="font:15px/2 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0">網膜硝子体、緑内障、角膜、屈折矯正、眼瞼。専門知識をお持ちの先生も、これから専門を持とうとする先生も、家庭の事情で短時間勤務を希望される先生も。チーム医療の中で互いに高め合い、共に成長できる医師を求めています。</p>
-            </div>
-            <div style="background:repeating-linear-gradient(135deg,#E9ECF1 0 12px,#F1F3F7 12px 24px);border-radius:16px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#5A6070;background:#fff;padding:6px 10px;border-radius:4px">PHOTO｜手術用顕微鏡を覗く医師（手術室）</span></div>
-          </div>
-
-          <div style="display:grid;grid-template-columns:280px 1fr;gap:64px;margin-bottom:80px">
-            <div><p style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#8A90A0;margin:0 0 12px">FIELDS &amp; CASES</p><h3 style="font:500 26px/1.5 'Zen Kaku Gothic New',sans-serif;margin:0">診療領域と症例</h3></div>
-            <div>
-              <p style="font:15px/2 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0 0 32px">2025年の観血的手術は3,534件。白内障を中心に、緑内障・硝子体・眼瞼・涙道・屈折矯正まで多様な症例に日常的に触れられます。難治性白内障や増殖網膜硝子体手術など、高難度症例の経験も積めます。</p>
-              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
-                <sc-for list="{{ drCases }}" as="c" hint-placeholder-count="6">
-                  <div style="background:#F2F4F8;border-radius:10px;padding:20px 22px;display:flex;justify-content:space-between;align-items:baseline"><span style="font:14px 'Zen Kaku Gothic New',sans-serif">{{ c.name }}</span><span style="font:600 20px 'DM Sans',sans-serif;color:#2A4E8F">{{ c.n }}</span></div>
-                </sc-for>
-              </div>
-              <p style="font:12px 'Zen Kaku Gothic New',sans-serif;color:#8A90A0;margin:12px 0 0">2025年 年間件数（グループ合計・現行HP診療実績より）</p>
-            </div>
-          </div>
-
-          <div style="display:grid;grid-template-columns:280px 1fr;gap:64px;margin-bottom:80px">
-            <div><p style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#8A90A0;margin:0 0 12px">OPERATING ENVIRONMENT</p><h3 style="font:500 26px/1.5 'Zen Kaku Gothic New',sans-serif;margin:0">手術環境・医療設備</h3></div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start">
-              <div style="background:repeating-linear-gradient(135deg,#E9ECF1 0 12px,#F1F3F7 12px 24px);border-radius:12px;aspect-ratio:4/3;min-width:0;display:flex;align-items:center;justify-content:center"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#5A6070;background:#fff;padding:6px 10px;border-radius:4px">PHOTO｜手術室全景</span></div>
-              <div style="display:flex;flex-direction:column;gap:12px">
-                <p style="font:15px/2 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0 0 8px">Lumera700をはじめ、Constellation・CENTURION・VERION・ORA・MEL 90など、大学病院と同等の手術機器を揃えています。笑気麻酔にも対応。</p>
-                <sc-for list="{{ drEquip }}" as="e" hint-placeholder-count="5"><span style="font:14px/1.6 'Zen Kaku Gothic New',sans-serif;padding:10px 0;border-top:1px solid #E2E5EB;display:flex;justify-content:space-between"><span>{{ e.name }}</span><span style="color:#8A90A0;font-family:'DM Sans',sans-serif;font-size:12px">{{ e.maker }}</span></span></sc-for>
-                <a href="About.dc.html#surgery" style="font:500 13px 'Zen Kaku Gothic New',sans-serif;color:#2A4E8F;margin-top:8px">医療設備をすべて見る →</a>
-              </div>
-            </div>
-          </div>
-
-          <div style="display:grid;grid-template-columns:280px 1fr;gap:64px;margin-bottom:80px">
-            <div><p style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#8A90A0;margin:0 0 12px">EXPERTISE &amp; RESEARCH</p><h3 style="font:500 26px/1.5 'Zen Kaku Gothic New',sans-serif;margin:0">専門性と学会・研究支援</h3></div>
-            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
-              <div style="border:1px solid #E2E5EB;border-radius:12px;padding:28px;box-sizing:border-box"><p style="font:500 18px/1.5 'Zen Kaku Gothic New',sans-serif;margin:0 0 12px">専門医のもとで学ぶ</p><p style="font:14px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0">網膜硝子体・緑内障・角膜など各分野の専門医が在籍。若手の先生にとって、より高度で専門的な知識を学ぶ絶好の機会です。</p></div>
-              <div style="border:1px solid #E2E5EB;border-radius:12px;padding:28px;box-sizing:border-box"><p style="font:500 18px/1.5 'Zen Kaku Gothic New',sans-serif;margin:0 0 12px">国内外の学会発表</p><p style="font:14px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0">国内学会はもとより、海外での発表や英語論文の作成まで、数多くの機会があります。交通費・宿泊費・参加登録費は院内規定で支給。</p></div>
-              <div style="border:1px solid #E2E5EB;border-radius:12px;padding:28px;box-sizing:border-box"><p style="font:500 18px/1.5 'Zen Kaku Gothic New',sans-serif;margin:0 0 12px">書籍・資料は院が購入</p><p style="font:14px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0">診療や研究に必要な書籍・資料は病院で購入します。出張手術・網膜専門外来など、地域医療に専門性を活かす場もあります。</p></div>
-            </div>
-          </div>
-
-          <div style="display:grid;grid-template-columns:280px 1fr;gap:64px;margin-bottom:80px">
-            <div><p style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#8A90A0;margin:0 0 12px">WORK STYLE</p><h3 style="font:500 26px/1.5 'Zen Kaku Gothic New',sans-serif;margin:0">働き方</h3></div>
-            <div style="background:#F2F4F8;border-radius:12px;padding:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:32px">
-              <div><span style="display:block;font:600 32px/1 'DM Sans',sans-serif;color:#2A4E8F;margin-bottom:10px">週4日</span><span style="font:14px/1.7 'Zen Kaku Gothic New',sans-serif;color:#5A6070">勤務が基本。週休3日制。</span></div>
-              <div><span style="display:block;font:600 32px/1 'DM Sans',sans-serif;color:#2A4E8F;margin-bottom:10px">残業なし</span><span style="font:14px/1.7 'Zen Kaku Gothic New',sans-serif;color:#5A6070">8:45〜17:45（休憩1時間45分）。基本的に残業はありません。</span></div>
-              <div><span style="display:block;font:600 32px/1 'DM Sans',sans-serif;color:#2A4E8F;margin-bottom:10px">土曜自由</span><span style="font:14px/1.7 'Zen Kaku Gothic New',sans-serif;color:#5A6070">土曜 8:45〜12:30 は自由出勤。</span></div>
-              <div><span style="display:block;font:600 32px/1 'DM Sans',sans-serif;color:#2A4E8F;margin-bottom:10px">非常勤可</span><span style="font:14px/1.7 'Zen Kaku Gothic New',sans-serif;color:#5A6070">週2〜3日・午前のみなどのご希望も相談できます。</span></div>
-            </div>
-          </div>
-
-          <div style="display:grid;grid-template-columns:280px 1fr;gap:64px;margin-bottom:64px">
-            <div><p style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#8A90A0;margin:0 0 12px">INTERVIEW</p><h3 style="font:500 26px/1.5 'Zen Kaku Gothic New',sans-serif;margin:0">医師インタビュー</h3></div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
-              <a href="#" style="display:flex;flex-direction:column;gap:16px"><span style="background:repeating-linear-gradient(135deg,#E9ECF1 0 12px,#F1F3F7 12px 24px);border-radius:12px;aspect-ratio:3/2;display:flex;align-items:center;justify-content:center"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#5A6070;background:#fff;padding:6px 10px;border-radius:4px">PHOTO｜医師ポートレート（診察室）</span></span><span style="font:500 20px/1.5 'Zen Kaku Gothic New',sans-serif">「大学病院と同じ手術を、地域で。それが一番の魅力でした」</span><span style="font:13px/1.6 'Zen Kaku Gothic New',sans-serif;color:#5A6070">眼科専門医 / 網膜硝子体 / 入職○年 <span style="margin-left:6px;font:600 10px/1 'DM Sans',sans-serif;letter-spacing:.08em;color:#9A6B1F;background:#FBF3E2;padding:4px 6px;border-radius:4px">仮コピー・取材要</span></span></a>
-              <a href="#" style="display:flex;flex-direction:column;gap:16px"><span style="background:repeating-linear-gradient(135deg,#E9ECF1 0 12px,#F1F3F7 12px 24px);border-radius:12px;aspect-ratio:3/2;display:flex;align-items:center;justify-content:center"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#5A6070;background:#fff;padding:6px 10px;border-radius:4px">PHOTO｜医師ポートレート（外来）</span></span><span style="font:500 20px/1.5 'Zen Kaku Gothic New',sans-serif">「週4日勤務で、家族との時間と専門性の両方を守れています」</span><span style="font:13px/1.6 'Zen Kaku Gothic New',sans-serif;color:#5A6070">眼科医 / 子育て中 / 入職○年 <span style="margin-left:6px;font:600 10px/1 'DM Sans',sans-serif;letter-spacing:.08em;color:#9A6B1F;background:#FBF3E2;padding:4px 6px;border-radius:4px">仮コピー・取材要</span></span></a>
-            </div>
-          </div>
-
-          <div style="display:flex;justify-content:space-between;align-items:center;background:#1F2433;border-radius:12px;padding:36px 40px;color:#fff">
-            <div><p style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#9FB4E0;margin:0 0 10px">DOCTOR RECRUIT INFO</p><p style="font:500 20px/1.5 'Zen Kaku Gothic New',sans-serif;margin:0">医師の募集要項（常勤 / 非常勤）</p></div>
-            <div style="display:flex;gap:12px"><a href="Recruit Info.dc.html#doctor" style="display:inline-flex;align-items:center;gap:10px;background:#fff;color:#1F2433;font:500 14px/1 'Zen Kaku Gothic New',sans-serif;padding:16px 28px;border-radius:999px">募集要項を見る →</a><a href="Entry.dc.html" style="display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.5);color:#fff;font:500 14px/1 'Zen Kaku Gothic New',sans-serif;padding:15px 28px;border-radius:999px">医院見学を申し込む</a></div>
-          </div>
-        </div>
-      </section>
-      
-    </div>
-    </sc-if>
-
-    <sc-if value="{{ showOrt }}" hint-placeholder-val="{{ false }}">
-    <div style="display:flex" data-screen-label="03 Orthoptist">
+    <sc-if value="{{ showOrt }}" hint-placeholder-val="{{ true }}">
+    <div style="display:flex" data-screen-label="02 Orthoptist">
       <section id="ort" style="width:1440px;flex:none;padding:120px 0;background:#F2F4F8;box-sizing:border-box">
         <div style="width:1160px;margin:0 auto">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:80px">
             <div style="background:repeating-linear-gradient(135deg,#DDE2EA 0 12px,#E6EAF0 12px 24px);border-radius:16px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#5A6070;background:#fff;padding:6px 10px;border-radius:4px">PHOTO｜OCT・視野検査を行う視能訓練士</span></div>
             <div>
-              <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">02 ORTHOPTIST</p>
+              <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">01 ORTHOPTIST</p>
               <h2 style="font:500 40px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0 0 24px;letter-spacing:.02em">視能訓練士</h2>
               <p style="font:500 22px/1.7 'Zen Kaku Gothic New',sans-serif;margin:0 0 20px">コミュニケーションを大切にした、<br>眼のプロフェッショナル。</p>
               <p style="font:15px/2 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0">診断と手術の質は、正確な検査から始まります。年間4,000例超の手術を支える術前検査、緑内障の視野管理、小児の斜視・弱視訓練まで、幅広い経験を積めます。</p>
@@ -125,10 +49,11 @@
           </div>
           <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:64px">
             <sc-for list="{{ ortBlocks }}" as="b" hint-placeholder-count="4">
-              <div style="background:#fff;border-radius:12px;padding:32px;min-height:260px;box-sizing:border-box;display:flex;flex-direction:column;gap:12px"><span style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#2A4E8F">{{ b.en }}</span><span style="font:500 20px/1.5 'Zen Kaku Gothic New',sans-serif">{{ b.title }}</span><span style="font:14px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070">{{ b.body }}</span></div>
+              <div style="background:#fff;border-radius:12px;overflow:hidden;display:flex;flex-direction:column"><div style="background:repeating-linear-gradient(135deg,#DDE2EA 0 12px,#E6EAF0 12px 24px);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;padding:12px"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#5A6070;background:#fff;padding:6px 10px;border-radius:4px;text-align:center">PHOTO｜{{ b.photo }}</span></div><div style="padding:24px 24px 28px;display:flex;flex-direction:column;gap:10px;flex:1"><span style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#2A4E8F">{{ b.en }}</span><span style="font:500 19px/1.5 'Zen Kaku Gothic New',sans-serif">{{ b.title }}</span><span style="font:14px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070">{{ b.body }}</span></div></div>
             </sc-for>
           </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:64px">
+          <div style="display:grid;grid-template-columns:340px 1fr 1fr;gap:24px;margin-bottom:64px;align-items:stretch">
+            <div style="background:repeating-linear-gradient(135deg,#DDE2EA 0 12px,#E6EAF0 12px 24px);border-radius:12px;min-height:420px;display:flex;align-items:center;justify-content:center;padding:16px"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#5A6070;background:#fff;padding:6px 10px;border-radius:4px;text-align:center">PHOTO｜朝、検査機器を立ち上げる視能訓練士（縦位置）</span></div>
             <div style="background:#fff;border-radius:12px;padding:32px;box-sizing:border-box">
               <p style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#8A90A0;margin:0 0 20px">1日の流れ（例・要確認）</p>
               <div style="display:flex;flex-direction:column">
@@ -156,12 +81,12 @@
     </sc-if>
 
     <sc-if value="{{ showNurse }}" hint-placeholder-val="{{ false }}">
-    <div style="display:flex" data-screen-label="04 Nurse">
+    <div style="display:flex" data-screen-label="03 Nurse">
       <section id="nurse" style="width:1440px;flex:none;padding:120px 0;box-sizing:border-box">
         <div style="width:1160px;margin:0 auto">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:80px">
             <div>
-              <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">03 NURSE</p>
+              <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">02 NURSE</p>
               <h2 style="font:500 40px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0 0 24px;letter-spacing:.02em">看護師</h2>
               <p style="font:500 22px/1.7 'Zen Kaku Gothic New',sans-serif;margin:0 0 20px">患者様とともに歩む、<br>思いやりのある看護。</p>
               <p style="font:15px/2 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0">外来での問診・点眼・処置から、手術室での介助・器械出し、術前術後の説明まで。眼科未経験でも研修で基礎から学べ、夜勤のない環境で看護のキャリアを続けられます。</p>
@@ -170,10 +95,11 @@
           </div>
           <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:64px">
             <sc-for list="{{ nurseBlocks }}" as="b" hint-placeholder-count="4">
-              <div style="background:#F2F4F8;border-radius:12px;padding:32px;min-height:260px;box-sizing:border-box;display:flex;flex-direction:column;gap:12px"><span style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#2A4E8F">{{ b.en }}</span><span style="font:500 20px/1.5 'Zen Kaku Gothic New',sans-serif">{{ b.title }}</span><span style="font:14px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070">{{ b.body }}</span></div>
+              <div style="background:#F2F4F8;border-radius:12px;overflow:hidden;display:flex;flex-direction:column"><div style="background:repeating-linear-gradient(135deg,#E9ECF1 0 12px,#F1F3F7 12px 24px);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;padding:12px"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#5A6070;background:#fff;padding:6px 10px;border-radius:4px;text-align:center">PHOTO｜{{ b.photo }}</span></div><div style="padding:24px 24px 28px;display:flex;flex-direction:column;gap:10px;flex:1"><span style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#2A4E8F">{{ b.en }}</span><span style="font:500 19px/1.5 'Zen Kaku Gothic New',sans-serif">{{ b.title }}</span><span style="font:14px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070">{{ b.body }}</span></div></div>
             </sc-for>
           </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:64px">
+          <div style="display:grid;grid-template-columns:340px 1fr 1fr;gap:24px;margin-bottom:64px;align-items:stretch">
+            <div style="background:repeating-linear-gradient(135deg,#E9ECF1 0 12px,#F1F3F7 12px 24px);border-radius:12px;min-height:420px;display:flex;align-items:center;justify-content:center;padding:16px"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#5A6070;background:#fff;padding:6px 10px;border-radius:4px;text-align:center">PHOTO｜朝の申し送りをする看護師チーム（縦位置）</span></div>
             <div style="border:1px solid #E2E5EB;border-radius:12px;padding:32px;box-sizing:border-box">
               <p style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#8A90A0;margin:0 0 20px">1日の流れ（例・要確認）</p>
               <div style="display:flex;flex-direction:column"><sc-for list="{{ nurseDay }}" as="d" hint-placeholder-count="6"><div style="display:grid;grid-template-columns:72px 1fr;gap:16px;padding:12px 0;border-top:1px solid #E2E5EB"><span style="font:600 13px 'DM Sans',sans-serif;color:#2A4E8F">{{ d.t }}</span><span style="font:14px/1.6 'Zen Kaku Gothic New',sans-serif">{{ d.v }}</span></div></sc-for></div>
@@ -199,13 +125,13 @@
     </sc-if>
 
     <sc-if value="{{ showClerk }}" hint-placeholder-val="{{ false }}">
-    <div style="display:flex" data-screen-label="05 Medical Clerk">
+    <div style="display:flex" data-screen-label="04 Medical Clerk">
       <section id="clerk" style="width:1440px;flex:none;padding:120px 0;background:#F2F4F8;box-sizing:border-box">
         <div style="width:1160px;margin:0 auto">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:80px">
             <div style="background:repeating-linear-gradient(135deg,#DDE2EA 0 12px,#E6EAF0 12px 24px);border-radius:16px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#5A6070;background:#fff;padding:6px 10px;border-radius:4px">PHOTO｜受付で高齢の患者を案内する医療事務</span></div>
             <div>
-              <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">04 MEDICAL CLERK</p>
+              <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">03 MEDICAL CLERK</p>
               <h2 style="font:500 40px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0 0 24px;letter-spacing:.02em">医療事務</h2>
               <p style="font:500 22px/1.7 'Zen Kaku Gothic New',sans-serif;margin:0 0 20px">人と人をつなぎ、<br>患者様の心に寄り添う。</p>
               <p style="font:15px/2 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0">来院した患者様が最初に出会い、最後に見送るのが医療事務です。受付・会計・予約調整に加え、完全予約制の院を円滑に回す調整役として、チーム医療の一員を担います。</p>
@@ -213,10 +139,11 @@
           </div>
           <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:64px">
             <sc-for list="{{ clerkBlocks }}" as="b" hint-placeholder-count="4">
-              <div style="background:#fff;border-radius:12px;padding:32px;min-height:260px;box-sizing:border-box;display:flex;flex-direction:column;gap:12px"><span style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#2A4E8F">{{ b.en }}</span><span style="font:500 20px/1.5 'Zen Kaku Gothic New',sans-serif">{{ b.title }}</span><span style="font:14px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070">{{ b.body }}</span></div>
+              <div style="background:#fff;border-radius:12px;overflow:hidden;display:flex;flex-direction:column"><div style="background:repeating-linear-gradient(135deg,#DDE2EA 0 12px,#E6EAF0 12px 24px);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;padding:12px"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#5A6070;background:#fff;padding:6px 10px;border-radius:4px;text-align:center">PHOTO｜{{ b.photo }}</span></div><div style="padding:24px 24px 28px;display:flex;flex-direction:column;gap:10px;flex:1"><span style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#2A4E8F">{{ b.en }}</span><span style="font:500 19px/1.5 'Zen Kaku Gothic New',sans-serif">{{ b.title }}</span><span style="font:14px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070">{{ b.body }}</span></div></div>
             </sc-for>
           </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:64px">
+          <div style="display:grid;grid-template-columns:340px 1fr 1fr;gap:24px;margin-bottom:64px;align-items:stretch">
+            <div style="background:repeating-linear-gradient(135deg,#DDE2EA 0 12px,#E6EAF0 12px 24px);border-radius:12px;min-height:420px;display:flex;align-items:center;justify-content:center;padding:16px"><span style="font:12px/1.4 ui-monospace,Menlo,monospace;color:#5A6070;background:#fff;padding:6px 10px;border-radius:4px;text-align:center">PHOTO｜開院前、受付で当日予約を確認する医療事務（縦位置）</span></div>
             <div style="background:#fff;border-radius:12px;padding:32px;box-sizing:border-box">
               <p style="font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#8A90A0;margin:0 0 20px">1日の流れ（例・要確認）</p>
               <div style="display:flex;flex-direction:column"><sc-for list="{{ clerkDay }}" as="d" hint-placeholder-count="6"><div style="display:grid;grid-template-columns:72px 1fr;gap:16px;padding:12px 0;border-top:1px solid #E2E5EB"><span style="font:600 13px 'DM Sans',sans-serif;color:#2A4E8F">{{ d.t }}</span><span style="font:14px/1.6 'Zen Kaku Gothic New',sans-serif">{{ d.v }}</span></div></sc-for></div>
@@ -241,13 +168,13 @@
     </div>
     </sc-if>
 
-    <div style="display:flex" data-screen-label="06 Other Jobs">
+    <div style="display:flex" data-screen-label="05 Other Jobs">
       <section style="width:1440px;flex:none;padding:96px 0 120px;border-top:1px solid #E2E5EB;box-sizing:border-box">
         <div style="width:1160px;margin:0 auto">
           <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">OTHER JOBS</p>
           <h2 style="font:500 30px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0 0 40px;letter-spacing:.02em">他の職種の仕事を知る</h2>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
-            <sc-for list="{{ bottomTabs }}" as="t" hint-placeholder-count="3">
+          <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px">
+            <sc-for list="{{ bottomTabs }}" as="t" hint-placeholder-count="2">
               <a href="#" onClick="{{ t.onClick }}" style="display:flex;justify-content:space-between;align-items:center;padding:24px;border:1px solid {{ t.border }};background:{{ t.bg }};border-radius:12px;cursor:pointer"><span><span style="display:block;font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.12em;color:#2A4E8F;margin-bottom:10px">{{ t.en }}</span><span style="font:500 17px/1.4 'Zen Kaku Gothic New',sans-serif;color:{{ t.color }}">{{ t.label }}</span></span><span style="font:18px 'DM Sans',sans-serif;color:#2A4E8F">{{ t.arrow }}</span></a>
             </sc-for>
           </div>
@@ -262,45 +189,39 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;showAll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Wireframe&quot;}}">
 class Component extends DCLogic {
-  state = { tab: (typeof location !== 'undefined' && ['doctor','ort','nurse','clerk'].includes(location.hash.slice(1))) ? location.hash.slice(1) : 'doctor' };
+  state = { tab: (typeof location !== 'undefined' && ['ort','nurse','clerk'].includes(location.hash.slice(1))) ? location.hash.slice(1) : 'ort' };
   renderVals() {
     const all = !!this.props.showAll;
     const tab = this.state.tab;
-    const defs = [['doctor','01 DOCTOR','医師'],['ort','02 ORTHOPTIST','視能訓練士'],['nurse','03 NURSE','看護師'],['clerk','04 MEDICAL CLERK','医療事務']];
+    const defs = [['ort','01 ORTHOPTIST','視能訓練士'],['nurse','02 NURSE','看護師'],['clerk','03 MEDICAL CLERK','医療事務']];
     const tabs = defs.map(([k,en,jp]) => { const on = all || k===tab; return { en, jp, line: on ? '#2A4E8F' : 'transparent', enColor: on ? '#2A4E8F' : '#8A90A0', jpColor: on ? '#2A4E8F' : '#1F2433', onClick: (e) => { e.preventDefault(); this.setState({ tab: k }); try { history.replaceState(null, '', '#' + k); } catch (_) {} } }; });
     const bottomTabs = defs.filter(([k]) => all || k!==tab).map(([k,en,jp]) => ({ en: en.replace(/^\d+ /, ''), label: jp + 'の仕事を知る', color: '#1F2433', border: '#E2E5EB', bg: '#fff', arrow: '→', onClick: (e) => { e.preventDefault(); this.setState({ tab: k }); try { history.replaceState(null, '', '#' + k); const el = document.querySelector('[data-screen-label="01 Title + Job Nav"]'); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 84, behavior: 'smooth' }); } catch (_) {} } }));
     return {
       tabs, bottomTabs,
-      showDoctor: all || tab==='doctor', showOrt: all || tab==='ort', showNurse: all || tab==='nurse', showClerk: all || tab==='clerk',
-      drCases: [
-        { name:'白内障手術', n:'1,877' },{ name:'緑内障手術', n:'350' },{ name:'硝子体手術', n:'333' },{ name:'眼瞼手術', n:'275' },{ name:'レーシック・ICL等', n:'257' },{ name:'抗VEGF硝子体注射', n:'755' },
-      ],
-      drEquip: [
-        { name:'手術用顕微鏡 Lumera700 / Lumera T', maker:'ZEISS' },{ name:'白内障/硝子体手術装置 Constellation', maker:'Alcon' },{ name:'白内障手術装置 CENTURION', maker:'Alcon' },{ name:'VERION イメージガイド / ORA', maker:'Alcon' },{ name:'エキシマレーザー MEL 90', maker:'ZEISS' },
-      ],
+      showOrt: all || tab==='ort', showNurse: all || tab==='nurse', showClerk: all || tab==='clerk',
       ortBlocks: [
-        { en:'WORK', title:'仕事内容', body:'視力・屈折・眼圧・視野などの基本検査から、OCT・眼底撮影・角膜形状解析、眼軸長測定による術前検査まで。医師の診断を支える検査全般を担います。' },
-        { en:'CASES', title:'検査・症例', body:'白内障・緑内障・網膜疾患を中心に多彩な症例。多焦点IOLやICLの術前後評価、小児の斜視・弱視検査・訓練など、専門性の高い検査に携われます。' },
-        { en:'EDUCATION', title:'教育', body:'新入社員研修と先輩ORTによるOJT。定期勉強会で最新知識を更新し、年1〜2回の全国学会参加は費用を院が支給します。' },
-        { en:'CAREER', title:'キャリア', body:'検査の専門性を深める道、後輩指導や部門運営を担う道。産休・育休後の復職も多く、長く専門職を続けられます。' },
+        { photo:'検査室でOCTを操作する視能訓練士', en:'WORK', title:'仕事内容', body:'視力・屈折・眼圧・視野などの基本検査から、OCT・眼底撮影・角膜形状解析、眼軸長測定による術前検査まで。医師の診断を支える検査全般を担います。' },
+        { photo:'術前の眼軸長測定・角膜形状解析の場面', en:'CASES', title:'検査・症例', body:'白内障・緑内障・網膜疾患を中心に多彩な症例。多焦点IOLやICLの術前後評価、小児の斜視・弱視検査・訓練など、専門性の高い検査に携われます。' },
+        { photo:'先輩ORTと検査結果を確認するOJT', en:'EDUCATION', title:'教育', body:'新入社員研修と先輩ORTによるOJT。定期勉強会で最新知識を更新し、年1〜2回の全国学会参加は費用を院が支給します。' },
+        { photo:'学会発表・勉強会で登壇するスタッフ', en:'CAREER', title:'キャリア', body:'検査の専門性を深める道、後輩指導や部門運営を担う道。産休・育休後の復職も多く、長く専門職を続けられます。' },
       ],
       ortDay: [
         { t:'8:40', v:'出勤・機器の立ち上げ、当日の予約確認' },{ t:'9:00', v:'午前外来：視力・屈折・眼圧・OCTなど検査' },{ t:'12:40', v:'昼休憩（1時間10分）' },{ t:'13:50', v:'午後外来：術前検査、視野検査、小児検査' },{ t:'17:00', v:'データ整理、翌日の準備' },{ t:'17:50', v:'退勤（残業は月平均2時間）' },
       ],
       nurseBlocks: [
-        { en:'OUTPATIENT', title:'外来', body:'問診・点眼・処置の介助、検査への誘導、患者様への説明。不安を抱えて来院される方に、最初に寄り添う役割です。' },
-        { en:'SURGERY', title:'手術関連業務', body:'年間3,500件超の手術を支える術前準備、器械出し、術中の患者ケア、術後の説明と経過フォロー。' },
-        { en:'EDUCATION', title:'教育', body:'眼科未経験でも安心の新入社員研修、接遇研修、定期勉強会。手術室業務は段階的に習得できます。' },
-        { en:'CAREER', title:'キャリア', body:'外来から手術室まで幅を広げる、あるいは手術室看護を極める。子育てと両立しながら続ける先輩も多数。' },
+        { photo:'外来で点眼・処置を行う看護師', en:'OUTPATIENT', title:'外来', body:'問診・点眼・処置の介助、検査への誘導、患者様への説明。不安を抱えて来院される方に、最初に寄り添う役割です。' },
+        { photo:'手術室で器械出しをする看護師', en:'SURGERY', title:'手術関連業務', body:'年間3,500件超の手術を支える術前準備、器械出し、術中の患者ケア、術後の説明と経過フォロー。' },
+        { photo:'手術室業務を先輩に教わる新人看護師', en:'EDUCATION', title:'教育', body:'眼科未経験でも安心の新入社員研修、接遇研修、定期勉強会。手術室業務は段階的に習得できます。' },
+        { photo:'子育てと両立しながら働く先輩看護師', en:'CAREER', title:'キャリア', body:'外来から手術室まで幅を広げる、あるいは手術室看護を極める。子育てと両立しながら続ける先輩も多数。' },
       ],
       nurseDay: [
         { t:'8:40', v:'出勤・申し送り、処置室・手術室の準備' },{ t:'9:00', v:'午前外来：問診・点眼・処置介助' },{ t:'12:40', v:'昼休憩' },{ t:'13:50', v:'午後：手術介助・器械出し／外来対応' },{ t:'16:30', v:'術後説明、翌日の術前準備' },{ t:'17:50', v:'退勤' },
       ],
       clerkBlocks: [
-        { en:'WORK', title:'仕事内容', body:'受付・会計・レセプト業務、電話対応、予約管理。完全予約制のため、予約調整がスムーズな診療の鍵になります。' },
-        { en:'PATIENT CARE', title:'患者対応', body:'ご高齢の方やお子さん連れの方への声かけ、手術前の書類説明、LINE相談窓口のご案内。院の「最初の顔」として安心をつくります。' },
-        { en:'EDUCATION', title:'教育', body:'新入社員研修と接遇研修で基礎から。眼科特有の保険請求や検査の流れは、先輩のOJTで段階的に習得します。' },
-        { en:'CAREER', title:'キャリア', body:'受付リーダー、レセプト担当、院間の調整役など。定期的な部署親睦会もあり、チームで長く働ける環境です。' },
+        { photo:'受付カウンターで患者様を案内する医療事務', en:'WORK', title:'仕事内容', body:'受付・会計・レセプト業務、電話対応、予約管理。完全予約制のため、予約調整がスムーズな診療の鍵になります。' },
+        { photo:'ご高齢の患者様に書類を説明する場面', en:'PATIENT CARE', title:'患者対応', body:'ご高齢の方やお子さん連れの方への声かけ、手術前の書類説明、LINE相談窓口のご案内。院の「最初の顔」として安心をつくります。' },
+        { photo:'先輩のOJTでレセプト業務を学ぶ様子', en:'EDUCATION', title:'教育', body:'新入社員研修と接遇研修で基礎から。眼科特有の保険請求や検査の流れは、先輩のOJTで段階的に習得します。' },
+        { photo:'受付チームのミーティング', en:'CAREER', title:'キャリア', body:'受付リーダー、レセプト担当、院間の調整役など。定期的な部署親睦会もあり、チームで長く働ける環境です。' },
       ],
       clerkDay: [
         { t:'8:40', v:'出勤・開院準備、当日予約の確認' },{ t:'9:00', v:'受付開始：保険証確認、問診票案内' },{ t:'12:40', v:'昼休憩' },{ t:'13:50', v:'午後受付・会計、電話・予約対応' },{ t:'17:00', v:'日計・翌日準備、レセプト作業' },{ t:'17:50', v:'退勤' },

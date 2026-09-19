@@ -29,8 +29,8 @@
             </div>
             <span style="font:12px 'DM Sans',sans-serif;color:#8A90A0;padding-bottom:6px">最終更新：2026.09.11</span>
           </div>
-          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px">
-            <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="5">
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+            <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="4">
               <a href="{{ t.href }}" onClick="{{ t.onClick }}" style="display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border:1px solid {{ t.border }};border-radius:10px;background:{{ t.tabBg }};cursor:pointer"><span style="font:500 15px 'Zen Kaku Gothic New',sans-serif;color:{{ t.labelColor }}">{{ t.label }}</span><span style="font:600 10px/1 'DM Sans',sans-serif;letter-spacing:.08em;color:{{ t.c }};background:{{ t.bg }};padding:6px 8px;border-radius:999px">{{ t.status }}</span></a>
             </sc-for>
           </div>
@@ -39,48 +39,8 @@
       
     </div>
 
-    <sc-if value="{{ showDoctor }}" hint-placeholder-val="{{ true }}">
-    <div style="display:flex" data-screen-label="02 Doctor">
-      <section id="doctor" style="width:1440px;flex:none;padding:96px 0 120px;box-sizing:border-box">
-        <div style="width:1160px;margin:0 auto">
-          <div style="display:grid;grid-template-columns:320px 1fr;gap:64px;align-items:start">
-            <div style="position:sticky;top:24px">
-              <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">01 DOCTOR</p>
-              <h2 style="font:500 36px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0 0 16px;letter-spacing:.02em">医師</h2>
-              <p style="font:15px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0 0 20px">地域に寄り添う、質の高い医療の提供へ。</p>
-              <span style="display:inline-block;font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.08em;color:#fff;background:#2A7A5A;padding:8px 12px;border-radius:999px">募集中</span>
-              <div style="margin-top:32px;display:flex;flex-direction:column;gap:10px"><a href="Entry.dc.html" style="display:inline-flex;justify-content:center;align-items:center;gap:8px;background:#2A4E8F;color:#fff;font:500 14px/1 'Zen Kaku Gothic New',sans-serif;padding:16px 24px;border-radius:999px">医師応募フォームへ →</a><a href="Job.dc.html#doctor" style="display:inline-flex;justify-content:center;align-items:center;border:1px solid #1F2433;font:500 14px/1 'Zen Kaku Gothic New',sans-serif;padding:15px 24px;border-radius:999px">医師の仕事を知る</a></div>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:32px">
-              <div style="border:1px solid #E2E5EB;border-radius:12px;overflow:hidden">
-                <div style="padding:20px 32px;background:#F2F4F8;display:flex;justify-content:space-between;align-items:center"><span style="font:500 18px 'Zen Kaku Gothic New',sans-serif">常勤（眼科医）</span><span style="font:12px 'Zen Kaku Gothic New',sans-serif;color:#5A6070">熊本 / 大牟田 / 荒尾</span></div>
-                <div style="padding:8px 32px 16px">
-                  <sc-for list="{{ drRows }}" as="r" hint-placeholder-count="6">
-                    <div style="display:grid;grid-template-columns:140px 1fr;gap:24px;padding:20px 0;border-bottom:1px solid #E2E5EB"><span style="font:500 14px/1.7 'Zen Kaku Gothic New',sans-serif;color:#5A6070">{{ r.k }}</span><div><span style="display:block;font:500 16px/1.7 'Zen Kaku Gothic New',sans-serif">{{ r.v }}</span><span style="display:block;font:13px/1.8 'Zen Kaku Gothic New',sans-serif;color:#8A90A0;margin-top:4px">{{ r.note }}</span></div></div>
-                  </sc-for>
-                </div>
-              </div>
-              <div style="border:1px solid #E2E5EB;border-radius:12px;overflow:hidden">
-                <div style="padding:20px 32px;background:#F2F4F8;display:flex;justify-content:space-between;align-items:center"><span style="font:500 18px 'Zen Kaku Gothic New',sans-serif">非常勤（眼科医）</span></div>
-                <div style="padding:24px 32px"><p style="font:15px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0">週2日・週3日・午前中のみなど、ご希望に応じて相談を承ります。給与・勤務条件の詳細はお問い合わせください。</p></div>
-              </div>
-              <div style="border:1px solid #E2E5EB;border-radius:12px;overflow:hidden">
-                <div style="padding:20px 32px;background:#F2F4F8;display:flex;justify-content:space-between;align-items:center"><span style="font:500 18px 'Zen Kaku Gothic New',sans-serif">常勤（内科医）</span><span style="font:12px 'Zen Kaku Gothic New',sans-serif;color:#5A6070">荒尾院</span></div>
-                <div style="padding:8px 32px 16px">
-                  <div style="display:grid;grid-template-columns:140px 1fr;gap:24px;padding:20px 0;border-bottom:1px solid #E2E5EB"><span style="font:500 14px/1.7 'Zen Kaku Gothic New',sans-serif;color:#5A6070">給与</span><div><span style="display:block;font:500 16px/1.7 'Zen Kaku Gothic New',sans-serif">年俸制 初年度 2,000万円（週5勤務）</span><span style="display:block;font:13px/1.8 'Zen Kaku Gothic New',sans-serif;color:#8A90A0;margin-top:4px">通勤手当・賞与を含む。専門知識・技術・業績による</span></div></div>
-                  <div style="display:grid;grid-template-columns:140px 1fr;gap:24px;padding:20px 0;border-bottom:1px solid #E2E5EB"><span style="font:500 14px/1.7 'Zen Kaku Gothic New',sans-serif;color:#5A6070">勤務・休日</span><div><span style="display:block;font:500 16px/1.7 'Zen Kaku Gothic New',sans-serif">月〜金 8:45〜17:45 / 週休2日制</span><span style="display:block;font:13px/1.8 'Zen Kaku Gothic New',sans-serif;color:#8A90A0;margin-top:4px">土曜 8:45〜12:30 自由出勤。夏季・年末年始休暇。非常勤(週2〜4日・午前のみ)も相談可</span></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-    </div>
-    </sc-if>
-
-    <sc-if value="{{ showStaff }}" hint-placeholder-val="{{ false }}">
-    <div style="display:flex" data-screen-label="03 Staff">
+    <sc-if value="{{ showStaff }}" hint-placeholder-val="{{ true }}">
+    <div style="display:flex" data-screen-label="02 Staff">
       <section style="width:1440px;flex:none;padding:96px 0 120px;box-sizing:border-box">
         <div style="width:1160px;margin:0 auto;display:flex;flex-direction:column;gap:96px">
           <sc-for list="{{ visibleStaff }}" as="s" hint-placeholder-count="1">
@@ -104,7 +64,7 @@
           </sc-for>
           <sc-if value="{{ showOther }}" hint-placeholder-val="{{ false }}">
           <div id="other" style="display:grid;grid-template-columns:320px 1fr;gap:64px;align-items:start;padding-top:{{ otherPadTop }};border-top:1px solid {{ otherLine }}">
-            <div><p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">05 OTHERS</p><h2 style="font:500 36px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0 0 16px;letter-spacing:.02em">その他</h2><p style="font:15px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0">清掃スタッフなど</p></div>
+            <div><p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">04 OTHERS</p><h2 style="font:500 36px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0 0 16px;letter-spacing:.02em">その他</h2><p style="font:15px/1.9 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0">清掃スタッフなど</p></div>
             <div style="border:1px dashed #C9CFD8;border-radius:12px;padding:40px;display:flex;justify-content:space-between;align-items:center;gap:32px">
               <div><p style="font:500 18px/1.5 'Zen Kaku Gothic New',sans-serif;margin:0 0 8px">清掃スタッフ（パート）</p><p style="font:14px/1.8 'Zen Kaku Gothic New',sans-serif;color:#5A6070;margin:0">募集条件の詳細は、お問い合わせください。募集を行っていない時期は「現在募集はありません」と表示します。</p></div>
               <span style="flex:none;font:600 11px/1 'DM Sans',sans-serif;letter-spacing:.08em;color:#5A6070;background:#F2F4F8;padding:8px 12px;border-radius:999px">現在募集なし（例）</span>
@@ -117,13 +77,13 @@
     </div>
     </sc-if>
 
-    <div style="display:flex" data-screen-label="04 Other Positions">
+    <div style="display:flex" data-screen-label="03 Other Positions">
       <section style="width:1440px;flex:none;padding:96px 0 120px;border-top:1px solid #E2E5EB;box-sizing:border-box">
         <div style="width:1160px;margin:0 auto">
           <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#2A4E8F;margin:0 0 16px">OTHER POSITIONS</p>
           <h2 style="font:500 30px/1.45 'Zen Kaku Gothic New',sans-serif;margin:0 0 40px;letter-spacing:.02em">他の職種の募集要項</h2>
-          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
-            <sc-for list="{{ bottomTabs }}" as="t" hint-placeholder-count="4">
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+            <sc-for list="{{ bottomTabs }}" as="t" hint-placeholder-count="3">
               <a href="{{ t.href }}" onClick="{{ t.onClick }}" style="display:flex;flex-direction:column;gap:12px;padding:24px;border:1px solid {{ t.border }};background:{{ t.bottomBg }};border-radius:12px;cursor:pointer"><span style="align-self:flex-start;font:600 10px/1 'DM Sans',sans-serif;letter-spacing:.08em;color:{{ t.c }};background:{{ t.bg }};padding:6px 8px;border-radius:999px">{{ t.status }}</span><span style="font:500 16px/1.5 'Zen Kaku Gothic New',sans-serif;color:{{ t.bottomColor }}">{{ t.bottomLabel }}</span><span style="font:16px 'DM Sans',sans-serif;color:#2A4E8F">{{ t.arrow }}</span></a>
             </sc-for>
           </div>
@@ -132,7 +92,7 @@
       
     </div>
 
-    <div style="display:flex" data-screen-label="05 Contact / Visit">
+    <div style="display:flex" data-screen-label="04 Contact / Visit">
       <section style="width:1440px;flex:none;padding:120px 0;background:#F2F4F8;box-sizing:border-box">
         <div style="width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:24px">
           <div style="background:#fff;border-radius:12px;padding:40px;box-sizing:border-box">
@@ -145,7 +105,7 @@
           <div style="background:#2A4E8F;border-radius:12px;padding:40px;box-sizing:border-box;color:#fff;display:flex;flex-direction:column">
             <p style="font:600 12px/1 'DM Sans',sans-serif;letter-spacing:.14em;color:#C9D3EA;margin:0 0 16px">VISIT</p>
             <h3 style="font:500 26px/1.5 'Zen Kaku Gothic New',sans-serif;margin:0 0 20px">職場見学会を実施しています</h3>
-            <p style="font:15px/1.9 'Zen Kaku Gothic New',sans-serif;color:#DDE4F3;margin:0 0 32px;flex:1">ご興味をお持ちの方は、当院までお気軽にご連絡ください。医師・スタッフいずれも、現場の雰囲気を実際に見ていただけます。</p>
+            <p style="font:15px/1.9 'Zen Kaku Gothic New',sans-serif;color:#DDE4F3;margin:0 0 32px;flex:1">ご興味をお持ちの方は、当院までお気軽にご連絡ください。現場の雰囲気を実際に見ていただけます。</p>
             <a href="Entry.dc.html" style="display:inline-flex;align-self:flex-start;align-items:center;gap:10px;background:#fff;color:#1F2433;font:500 14px/1 'Zen Kaku Gothic New',sans-serif;padding:16px 28px;border-radius:999px">医院見学を申し込む →</a>
           </div>
         </div>
@@ -159,7 +119,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;showAll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Wireframe&quot;}}">
 class Component extends DCLogic {
-  state = { tab: (typeof location !== 'undefined' && ['doctor','ort','nurse','clerk','other'].includes(location.hash.slice(1))) ? location.hash.slice(1) : 'doctor' };
+  state = { tab: (typeof location !== 'undefined' && ['ort','nurse','clerk','other'].includes(location.hash.slice(1))) ? location.hash.slice(1) : 'ort' };
   renderVals() {
     const prep = { status:'準備中', c:'#9A6B1F', bg:'#FBF3E2' };
     const common = (pay, payNote, satNote) => [
@@ -174,7 +134,6 @@ class Component extends DCLogic {
     const all = !!this.props.showAll;
     const tab = this.state.tab;
     const tabDefs = [
-      { key:'doctor', label:'医師', href:'#doctor', status:'募集中', c:'#fff', bg:'#2A7A5A' },
       { key:'ort', label:'視能訓練士', href:'#ort', ...prep },
       { key:'nurse', label:'看護師', href:'#nurse', ...prep },
       { key:'clerk', label:'医療事務', href:'#clerk', ...prep },
@@ -186,27 +145,18 @@ class Component extends DCLogic {
     return {
       bottomTabs: tabDefs.filter(t => all || t.key!==tab).map(t => ({ ...t, border: '#E2E5EB', bottomBg: '#fff', bottomColor: '#1F2433', bottomLabel: t.label + 'の募集要項', arrow: '→', onClick: (e) => { e.preventDefault(); this.setState({ tab: t.key }); try { history.replaceState(null, '', t.href); } catch (_) {} scrollTop(); } })),
       tabs: tabDefs.map(t => { const on = !all && t.key===tab; return { ...t, border: on ? '#2A4E8F' : '#E2E5EB', tabBg: on ? '#E6ECF7' : '#fff', labelColor: on ? '#2A4E8F' : '#1F2433', onClick: (e) => { e.preventDefault(); this.setState({ tab: t.key }); try { history.replaceState(null, '', t.href); } catch (_) {} } }; }),
-      showDoctor: all || tab==='doctor',
       showStaff: all || isStaffTab || tab==='other',
       showOther: all || tab==='other',
       visibleStaff: (all ? staffAll : staffAll.filter(s => s.id===tab)).map((s, i) => ({ ...s, padTop: (all && i>0) ? '96px' : '0', lineColor: (all && i>0) ? '#E2E5EB' : 'transparent' })),
       otherPadTop: all ? '96px' : '0',
       otherLine: all ? '#E2E5EB' : 'transparent',
-      drRows: [
-        { k:'給与', v:'年俸制 初年度 1,600万〜2,000万円（週4勤務）', note:'通勤手当・賞与を含む。専門知識や技術の有無、手術技能、業績による' },
-        { k:'勤務時間', v:'月〜金 8:45〜17:45（休憩1時間45分）のうち4日', note:'土曜 8:45〜12:30 は自由出勤。基本的に残業なし' },
-        { k:'休日・休暇', v:'週休3日制、夏季休暇、年末年始休暇', note:'' },
-        { k:'各種保険', v:'労災保険、雇用保険、健康保険、厚生年金保険', note:'' },
-        { k:'学会参加', v:'国内・海外学会の交通費、宿泊費、参加登録費を支給', note:'院内規定による。学会参加を推奨' },
-        { k:'その他', v:'必要な書籍・資料等は病院で購入', note:'福利厚生はENVIRONMENTページ参照' },
-      ],
     };
   }
   staffData(common) {
     return [
-        { id:'ort', en:'02 ORTHOPTIST', name:'視能訓練士', tagline:'コミュニケーションを大切にした眼のプロフェッショナル', jobHref:'Job.dc.html#ort', rows: common('月給 190,000〜240,000円', '土曜日5回出勤した場合。土曜手当 10,000円／回。試用期間2ヶ月。昇給あり', '') },
-        { id:'nurse', en:'03 NURSE', name:'看護師', tagline:'患者様とともに歩む思いやりのある看護', jobHref:'Job.dc.html#nurse', rows: common('月給 210,000〜260,000円', '土曜日5回出勤した場合。土曜手当 10,000円／回。試用期間2ヶ月。昇給あり', '') },
-        { id:'clerk', en:'04 MEDICAL CLERK', name:'医療事務', tagline:'人と人をつなぎ、患者様の心に寄り添う', jobHref:'Job.dc.html#clerk', rows: common('月給 160,000〜185,000円', '高卒・専門学校卒・短大卒以上。土曜日5回出勤した場合。土曜手当 5,000円／回。試用期間2ヶ月。昇給あり', '') },
+        { id:'ort', en:'01 ORTHOPTIST', name:'視能訓練士', tagline:'コミュニケーションを大切にした眼のプロフェッショナル', jobHref:'Job.dc.html#ort', rows: common('月給 190,000〜240,000円', '土曜日5回出勤した場合。土曜手当 10,000円／回。試用期間2ヶ月。昇給あり', '') },
+        { id:'nurse', en:'02 NURSE', name:'看護師', tagline:'患者様とともに歩む思いやりのある看護', jobHref:'Job.dc.html#nurse', rows: common('月給 210,000〜260,000円', '土曜日5回出勤した場合。土曜手当 10,000円／回。試用期間2ヶ月。昇給あり', '') },
+        { id:'clerk', en:'03 MEDICAL CLERK', name:'医療事務', tagline:'人と人をつなぎ、患者様の心に寄り添う', jobHref:'Job.dc.html#clerk', rows: common('月給 160,000〜185,000円', '高卒・専門学校卒・短大卒以上。土曜日5回出勤した場合。土曜手当 5,000円／回。試用期間2ヶ月。昇給あり', '') },
     ];
   }
 }
